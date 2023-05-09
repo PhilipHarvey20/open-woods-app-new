@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage';
 import { Navbar, Nav } from 'react-bootstrap';
 
 function App() {
-  return (
+  return ( 
     <BrowserRouter>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Navbar.Brand href="#home">
