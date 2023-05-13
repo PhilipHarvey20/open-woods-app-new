@@ -1,19 +1,14 @@
 import React, { useState } from 'react'
-import { useEffect } from 'react'
+import { onChange } from 'react-native';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
-import mapboxgl from 'mapbox-gl'
 import { Dropdown, DropdownButton } from 'react-bootstrap'
 import { Form } from 'react-bootstrap'
 import CountUp from 'react-countup'
 import { BsPlus, BsDash } from 'react-icons/bs'
-import Select from 'react-select'
 import { stateOptions } from 'web/src/AmericanStates'
 // import './NewHomePage.css'
-
-// import { Form, NumberField, Label, Submit, FieldError } from '@redwoodjs/forms'
-import { MetaTags, useMutation } from '@redwoodjs/web'
 
 import { activityOptions } from 'src/ActivityOptions'
 // import AddressContext from 'src/components/Address_Field/AddressContext'
@@ -102,7 +97,7 @@ const HomePage = () => {
 
   return (
     <>
-      <MetaTags title="Home" description="Home page" />
+      {/* <MetaTags title="Home" description="Home page" /> */}
       <>
         <ArticlesCell />
         <Form onSubmit={onSubmit}>
