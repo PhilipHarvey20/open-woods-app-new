@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import { onChange } from 'react-native';
-
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import { Dropdown, DropdownButton } from 'react-bootstrap'
 import { Form } from 'react-bootstrap'
 import CountUp from 'react-countup'
 import { BsPlus, BsDash } from 'react-icons/bs'
-import { stateOptions } from 'web/src/AmericanStates'
+import { stateOptions } from 'src/AmericanStates'
 // import './NewHomePage.css'
 
 import { activityOptions } from 'src/ActivityOptions'
@@ -17,7 +16,7 @@ import AddressField from 'src/components/Address_Field/AddressField'
 import ArticlesCell from 'src/components/ArticlesCell'
 import SatelliteMap from 'src/components/Satelite_Map/SateliteMap'
 //  ****** MAP ***********
-import 'web/src/pages/HomePage/HomePage.css'
+import 'src/pages/HomePage/HomePage.css'
 
 import CalcPrice from '../../F_CalcPrice/CalculatePriceFunction.js'
 
