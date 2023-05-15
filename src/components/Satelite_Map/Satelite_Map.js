@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react'
 import MapboxDraw from '@mapbox/mapbox-gl-draw'
 import MapboxGeocoding from '@mapbox/mapbox-sdk/services/geocoding'
 import * as turf from '@turf/turf'
-import ReactMapboxGl, { Marker } from 'react-mapbox-gl'
+// import ReactMapboxGl, { Marker } from 'react-mapbox-gl'
 
-import mapboxgl from '!mapbox-gl'
-import './SatelliteMap.css'
+import mapboxgl from 'mapbox-gl'
+import './Satellite_Map.css'
 
 function SatelliteMap({ address }) {
   const [lngLat, setLngLat] = useState([-86.85288, 33.329108])

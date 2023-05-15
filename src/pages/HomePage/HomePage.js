@@ -7,15 +7,21 @@ import { Dropdown, DropdownButton } from 'react-bootstrap'
 import { Form } from 'react-bootstrap'
 import CountUp from 'react-countup'
 import { BsPlus, BsDash } from 'react-icons/bs'
-import { stateOptions } from 'src/pages/AmericanStates'
+import { stateOptions } from './AmericanStates'
 // import './NewHomePage.css'
 
-import { activityOptions } from 'src/ActivityOptions'
+import { activityOptions } from './ActivityOptions'
 // import AddressContext from 'src/components/Address_Field/AddressContext'
-import AddressField from 'src/components/Address_Field/AddressField'
+// import AddressField from 'src/components/Address_Field/AddressField'
+// import AddressField from '../Address_Field/AddressField'
+import AddressField from '../components/Address_Field/AddressField';
+import '../components/Address_Field/AddressField.css';
+
+
+
 //  ****** MAP ***********
-import ArticlesCell from 'src/components/ArticlesCell'
-import SatelliteMap from 'src/components/Satelite_Map/SateliteMap'
+import SatelliteMap from '../components/Satelite_Map/Satelite_Map'
+
 //  ****** MAP ***********
 import 'src/pages/HomePage/HomePage.css'
 
@@ -99,7 +105,6 @@ const HomePage = () => {
     <>
       {/* <MetaTags title="Home" description="Home page" /> */}
       <>
-        <ArticlesCell />
         <Form onSubmit={onSubmit}>
           <div className="col-md-6 d-flex ">
             <div className="w-50">

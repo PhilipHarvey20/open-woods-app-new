@@ -1,0 +1,167 @@
+
+
+nav {
+  margin-top: 30px;
+}
+
+
+
+/* make homepage light grey */
+
+img {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.select {
+    float: left;
+    position: left;
+    width: 30%;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    margin-left: 10px;
+    padding: 10;
+}
+
+.final-price {
+  position: absolute;
+  bottom: calc(1in + 30px);
+  left: 96px;
+  right: calc(100% - 330px);
+  font-size: 4em;
+  font-weight: 600; /* bold font weight */
+  letter-spacing: 1px; /* increased letter spacing */
+  line-height: 1; /* reduced line height */
+  font-family: 'Lato', sans-serif; /* modern sans-serif font.........Helvetica Neue */
+}
+
+/* Activity and State */
+.dropdown-container {
+  display: flex;
+  justify-content: left; /* Change to left alignment */
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  position: relative;
+  left: 10px;
+  /* width: 45; */
+}
+
+/* Activity and State */
+.dropdown-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #778184ff;
+  justify-content: flex-end;
+  outline: none;
+  border-color: #778184ff; /* Set the custom outline color */
+
+}
+
+/* Activity and State */
+.dropdown-button .dropdown-toggle {
+  background-color: #778184ff;
+  height: 40px;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0.5rem; /* Add rounded corners */
+  border-color: #778184ff; /* Set the custom outline color */
+
+}
+
+/* Activity and State */
+.dropdown-button .dropdown-toggle:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #778184ff; /* Set the custom outline color */
+}
+
+/* Activity and State */
+.dropdown-button .dropdown-toggle:active {
+  background-color: #a0ab8aff;
+  box-shadow: none;
+  border-color: #778184ff; /* Set the custom outline color */
+}
+/* Activity and State */
+.selected-item {
+  background-color: #778184ff !important;
+  color: white;
+}
+/* Activity and State */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #778184ff;
+  color: white;
+}
+/* Activity and State */
+.dropdown-menu .dropdown-item:active,
+.dropdown-menu .dropdown-item:focus {
+  background-color: #778184ff;
+  color: white;
+}
+/* Activity and State */
+  .form-group label {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    text-align: left;
+    justify-content: flex-start;
+    padding-left: 0; /* Remove the padding on the left */
+    margin-right: 10px; /* Add margin to the right to create spacing between the label and container */
+  }
+}
+
+
+/* Acreage and Duration */
+.button-container {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative; /* make position relative to its parent container */
+  left: 400px; /* set the left position to 240px */
+  width: 15%;
+  /* OR */
+  /* left: 23%; */ /* set the left position to 23% of the parent container */
+}
+
+/* Acreage and Duration */
+.increment-button {
+  border-radius: 0 4px 4px 0;
+  background-color: rgb(190, 121, 72);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+/* Acreage and Duration */
+.decrement-button {
+  border-radius: 4px 0 0 4px;
+  background-color: rgb(190, 121, 72);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+/* Acreage and Duration */
+.input-field {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  padding: 8px;
+
+  border: 1px solid gray;
+  border-radius: 0 4px 4px 0;
+  outline: none;
+}
