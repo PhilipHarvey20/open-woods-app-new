@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import HomePage from './pages/HomePage';
 
 
@@ -27,7 +28,9 @@ function App() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-        <Route exact path="/" component={HomePage} />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </BrowserRouter>
   );
 }
