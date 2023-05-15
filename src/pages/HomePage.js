@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-import { onChange } from 'react-native';
+// import { onChange } from 'react-native'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import { Dropdown, DropdownButton } from 'react-bootstrap'
 import { Form } from 'react-bootstrap'
 import CountUp from 'react-countup'
 import { BsPlus, BsDash } from 'react-icons/bs'
-import { stateOptions } from 'src/AmericanStates'
+import { stateOptions } from 'src/pages/AmericanStates'
 // import './NewHomePage.css'
 
 import { activityOptions } from 'src/ActivityOptions'
