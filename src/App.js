@@ -11,13 +11,13 @@ function App() {
     <BrowserRouter>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Navbar.Brand href="#home">
-          <img
-            src="your-logo.png"
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-            alt="Your Logo"
-          />
+        <img
+      src={process.env.PUBLIC_URL + "/images/OpenWoods_Logo.svg"}
+      width="30"
+      height="30"
+      className="d-inline-block align-top"
+      alt="Your Logo"
+    />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
