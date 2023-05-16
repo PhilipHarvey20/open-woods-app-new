@@ -5,6 +5,25 @@
 .navbar {
   background-color: #64705f;
   height: 110px; /* Adjust the height of the navbar as needed */
+  padding: 0; /* Remove padding inside the navbar */
+  margin: 0; /* Remove margins from the navbar */
+  border: 0; /* Remove borders from the navbar */
+  border-radius: 0; /* Remove border radius from the navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem; /* Increase the font-size of the navbar brand text */
+  font-weight: bold; /* Increase the font-weight of the navbar brand text */
+  color: #fff; /* Change the navbar brand text color */
+  text-transform: uppercase; /* Make the navbar brand text uppercase */
+  letter-spacing: 0.1em; /* Add letter spacing to the navbar brand text */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
 }
 
 .logo-container {
