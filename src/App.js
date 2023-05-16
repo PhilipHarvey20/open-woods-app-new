@@ -8,7 +8,7 @@ function App() {
   return ( 
     <BrowserRouter>
       <div className="App">
-        <Navbar bg="dark" variant="dark" expand="lg" className="navbar">
+        <Navbar className="navbar" expand="lg" >
           <Navbar.Brand href="#home" className="logo-container">
             <img
               src={process.env.PUBLIC_URL + "/images/OpenWoods_Logo.svg"}

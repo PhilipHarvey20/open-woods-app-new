@@ -3,24 +3,24 @@
 }
 
 .navbar {
-  background-color: #a0ab8a;
+  background-color: #64705f;
   height: 110px; /* Adjust the height of the navbar as needed */
 }
 
 .logo-container {
   display: flex;
   align-items: center;  
-  padding: 0 50px; /* Adjust the left and right padding as needed */
+  padding: 0 60px; /* first number = top/bottom second number = left/right */
 
 }
 
 .logo {
-  width: 120px; /* Adjust the logo width as needed */
+  width: 150px; /* Adjust the logo width as needed */
   height: 100%; /* Set the height of the logo as a percentage of the navbar height */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px; /* Add some spacing between the logo and the navbar brand text if desired */
+  margin-right: 100px; /* Add some spacing between the logo and the navbar brand text if desired */
 }
 
 .nav-link_style {
