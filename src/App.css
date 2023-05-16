@@ -2,37 +2,35 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  background-color: #a0ab8a;
+  height: 110px; /* Adjust the height of the navbar as needed */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo-container {
   display: flex;
-  flex-direction: column;
+  align-items: center;  
+  padding: 0 5px; /* Adjust the left and right padding as needed */
+
+}
+
+.logo {
+  width: 120px; /* Adjust the logo width as needed */
+  height: 100%; /* Set the height of the logo as a percentage of the navbar height */
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-right: 10px; /* Add some spacing between the logo and the navbar brand text if desired */
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link_style {
+  padding: 0 30px; /* Add padding between the home, about, and contact buttons */
+  padding-left: 50px; 
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 767px) {
+  .logo {
+    width: 16px; /* Adjust the logo size for smaller screens if necessary */
   }
 }
