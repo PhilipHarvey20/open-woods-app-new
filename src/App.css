@@ -4,7 +4,7 @@
 
 .navbar {
   background-color: #64705f;
-  height: 110px; /* Adjust the height of the navbar as needed */
+  height: 90px; /* Adjust the height of the navbar as needed */
   padding: 0; /* Remove padding inside the navbar */
   margin: 0; /* Remove margins from the navbar */
   border: 0; /* Remove borders from the navbar */
@@ -23,7 +23,7 @@
   left: 0;
   z-index: 1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  
+
 }
 
 .logo-container {
