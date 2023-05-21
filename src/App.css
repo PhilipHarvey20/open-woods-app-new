@@ -33,7 +33,7 @@
   display: flex;
   align-items: center;  
   justify-content: center;
-  padding: 0px 60px; /* first number = top/bottom second number = left/right */
+  padding: 0px 70px; /* first number = top/bottom second number = left/right */
   margin: 0px; /* Remove margins from the navbar */
 }
 
