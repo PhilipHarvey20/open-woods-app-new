@@ -8,15 +8,12 @@ function App() {
   return ( 
     <BrowserRouter>
       <div className="App">
-        <Navbar className="navbar" expand="lg" >
-          <Navbar.Brand href="#home" className="logo-container">
+        <div className="navbar" expand="lg" >
             <img
               src={process.env.PUBLIC_URL + "/images/OpenWoods_Logo.svg"}
               className="logo"
               alt="Your Logo"
             />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
               <Nav.Link href="#home" className=".nav-link_style">Home</Nav.Link>
@@ -24,7 +21,7 @@ function App() {
               <Nav.Link href="#contact" className="nav-link">Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
-        </Navbar>
+        </div>
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>

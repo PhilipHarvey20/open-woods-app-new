@@ -16,6 +16,10 @@ img {
   left: 0;
 }
 
+.activityForm {
+  min-height: 85vh;
+}
+
 .select {
     float: left;
     position: left;
