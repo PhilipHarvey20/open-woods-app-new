@@ -4,7 +4,7 @@
 
 .navbar {
   background-color: #64705f;
-  height: 90px; /* Adjust the height of the navbar as needed */
+  height: 10vh; /* Adjust the height of the navbar as needed */
   padding: 0; /* Remove padding inside the navbar */
   margin: 0; /* Remove margins from the navbar */
   border: 0; /* Remove borders from the navbar */

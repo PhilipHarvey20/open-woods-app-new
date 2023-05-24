@@ -1,10 +1,50 @@
-
-
-nav {
-  margin-top: 30px;
+.home-container {
+  border: 1px solid red;
+  height: 90vh;
+  display: flex;
+  width: 100vw;
 }
 
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
 
+input {
+  height: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-output {
+  flex-grow: 1;
+}
+
+.total-price-input {
+  width: 15%;
+}
+
+.home-form {
+  border: 3px solid rgb(152, 151, 151);
+  height: 80%;
+  width: 80;
+  margin: 1rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-form-container {
+  border: 1px solid green;
+  height: 90vh;
+  width: 50%;
+}
+
+.home-map-container {
+  border: 1px solid green;
+  height: 90vh;
+  width: 50%;
+}
 
 /* make homepage light grey */
 

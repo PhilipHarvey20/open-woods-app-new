@@ -77,7 +77,7 @@ function SatelliteMap({ address }) {
   return (
     <div className="map-container">
       <div id="map" className="map" />
-      <div id="calculated-area" />
+      {/* <div id="calculated-area" /> */}
     </div>
   )
 }
