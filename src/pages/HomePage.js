@@ -108,18 +108,35 @@ const HomePage = () => {
       <div className="home-form-container">
         <div className="home-form">
           <div className="form-title">92.3 acres - Washington, IL</div>
-          <div className="form-inputs">
+          <div className="form-inputs display: flex">
             <div>
-              <label className="mx-2">One</label><input type="text" />
+              <label className="m-3">Activity: </label>
+              <DropdownButton
+                    id="activity-dropdown"
+                    title={
+                      activityOption ? activityOption.label : 'Make a selection'
+                    }
+                    menuVariant="dark"
+                    size="lg"
+                  >
+                    {activityOptions.map((option) => (
+                      <Dropdown.Item
+                        key={option.value}
+                        onClick={() => setActivityOption(option)}
+                      >
+                        {option.label}
+                      </Dropdown.Item>
+                    ))}
+                  </DropdownButton>
+              </div>
+            <div>
+              <label className="m-3">State:</label><input type="text" />
             </div>
             <div>
-              <label className="mx-2">One</label><input type="text" />
+              <label className="m-3">Duration: </label><input type="text" />
             </div>
             <div>
-              <label className="mx-2">One</label><input type="text" />
-            </div>
-            <div>
-              <label className="mx-2">One</label><input type="text" />
+              <label className="m-3">Acreage </label><input type="text" />
             </div>
             <Button>Submit</Button>
           </div>
