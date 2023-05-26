@@ -107,7 +107,7 @@ const HomePage = () => {
     <div className="home-container">
       <div className="home-form-container">
         <div className="home-form">
-          <div className="form-title">92.3 acres - Washington, IL</div>
+          <div className="form-title">Land Lease Price Calculator</div>
           <div className="form-inputs display: flex">
             <div>
               <label className="m-3">Activity: </label>

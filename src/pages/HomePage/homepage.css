@@ -5,22 +5,34 @@
   width: 100vw;
 }
 
+
+
 .form-inputs {
   display: flex;
   flex-direction: column;
   /* align left */
-  align-items: start;
+  align-items: start; /* Change to left alignment */
   font-family: 'Lato';
-  font-size: 1.5rem;
-  font-weight: 400; 
+  font-size: 150%; /* increased font size */
+  font-weight: 500; /* bold font weight */
 padding-left: 1rem;
 padding-right: 1rem;
-padding-top: 2rem;   /* rem mean padding on all four sides */
-padding-bottom: 2rem;   /* rem mean padding on all four sides */
+padding-top: 2rem;   
+padding-bottom: 2rem;   
 
 }
 
-input {
+
+.form-title {
+font-size: 190%;
+padding: 1rem;
+  font-weight: 600; /* bold font weight */
+  letter-spacing: 1px; /* increased letter spacing */
+  line-height: 1; /* reduced line height */
+  font-family: 'Lato', sans-serif; 
+}
+
+  input {
   height: 1rem;
   margin-bottom: 1rem;
 }
