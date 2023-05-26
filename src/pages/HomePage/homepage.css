@@ -6,7 +6,7 @@
 }
 
 .form-title {
-  font-size: 190%;
+  font-size: 250%;
   padding: 1rem;
     font-weight: 600; /* bold font weight */
     letter-spacing: 1px; /* increased letter spacing */
@@ -27,8 +27,6 @@ padding-top: 2rem;
 padding-bottom: 2rem;   
 
 }
-
-
 
 
   input {
