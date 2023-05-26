@@ -5,12 +5,18 @@
   width: 100vw;
 }
 
-
+.form-title {
+  font-size: 190%;
+  padding: 1rem;
+    font-weight: 600; /* bold font weight */
+    letter-spacing: 1px; /* increased letter spacing */
+    line-height: 1; /* reduced line height */
+    font-family: 'Lato', sans-serif; 
+  }
 
 .form-inputs {
   display: flex;
   flex-direction: column;
-  /* align left */
   align-items: start; /* Change to left alignment */
   font-family: 'Lato';
   font-size: 150%; /* increased font size */
@@ -23,14 +29,7 @@ padding-bottom: 2rem;
 }
 
 
-.form-title {
-font-size: 190%;
-padding: 1rem;
-  font-weight: 600; /* bold font weight */
-  letter-spacing: 1px; /* increased letter spacing */
-  line-height: 1; /* reduced line height */
-  font-family: 'Lato', sans-serif; 
-}
+
 
   input {
   height: 1rem;
