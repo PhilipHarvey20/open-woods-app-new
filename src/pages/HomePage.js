@@ -6,7 +6,6 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import { Dropdown, DropdownButton, Button } from 'react-bootstrap'
 import { Form } from 'react-bootstrap'
 import CountUp from 'react-countup'
-import { BsPlus, BsDash } from 'react-icons/bs'
 import { stateOptions } from './AmericanStates'
 // import './NewHomePage.css'
 import '../pages/HomePage/homepage.css'
@@ -114,12 +113,14 @@ const HomePage = () => {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <label className="mt-3 mb-3">Choose an Activity:</label>
                 <DropdownButton
+                className = "dropdown-button"
                   id="activity-dropdown"
                   title={
                     activityOption ? activityOption.label : 'Make a selection'
                   }
                   menuVariant="dark"
                   size="lg"
+                  style={{ color: '#778184ff' }} 
                 >
                   {activityOptions.map((option) => (
                     <Dropdown.Item
@@ -134,6 +135,7 @@ const HomePage = () => {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <label className="mt-3 mb-3">Choose a State:</label>
                 <DropdownButton
+                  className = "dropdown-button"
                   id="state-dropdown"
                   title={
                     americanState ? americanState.label : 'Make a selection'

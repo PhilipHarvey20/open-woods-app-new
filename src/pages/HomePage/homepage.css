@@ -23,7 +23,7 @@
 
 .form-title {
   font-size: 250%;
-  padding: 1rem;
+  padding: 2rem;
     font-weight: 600; /* bold font weight */
     letter-spacing: 1px; /* increased letter spacing */
     line-height: 1; /* reduced line height */
@@ -120,14 +120,7 @@ img {
 
 /* Activity and State */
 .dropdown-button {
-  width: 100%;
-  display: flex;
-  align-items: right;
   color: #778184ff;
-  justify-content: flex-end;
-  outline: none;
-  border-color: #778184ff; /* Set the custom outline color */
-
 }
 
 /* Activity and State */
