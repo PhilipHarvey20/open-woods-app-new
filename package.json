@@ -14,6 +14,7 @@
     "mapbox-gl-draw": "^0.16.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
+    "react-bootstrap-input-spinner": "^1.0.2",
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",

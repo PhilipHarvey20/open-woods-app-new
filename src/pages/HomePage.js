@@ -107,6 +107,8 @@ const HomePage = () => {
     <div className="home-container">
       <div className="home-form-container">
         <div className="home-form">
+        <Form>
+
           <div className="form-title">Land Lease Price Calculator</div>
           <div className="form-inputs">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -158,9 +160,25 @@ const HomePage = () => {
                     </Dropdown.Menu>
                   </DropdownButton>
             </div>
+
+
+
             <div>
-              <label className="m-3">Duration: </label><input type="text" />
+            <Form.Group 
+            tyle={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+            controlId="exampleForm.ControlInput2">
+            <label className="mt-3 mb-3">Choose a State:</label>
+        <Form.Control
+          type="number"
+          size = "lg"
+          placeholder="Enter duration"
+          value={duration}
+          onChange={(e) => setDuration(e.target.value)}
+        />
+      </Form.Group>
             </div>
+
+
             <div>
               <label className="m-3">Acreage </label><input type="text" />
             </div>
