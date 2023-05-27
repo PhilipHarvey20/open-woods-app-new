@@ -109,8 +109,8 @@ const HomePage = () => {
         <div className="home-form">
           <div className="form-title">Land Lease Price Calculator</div>
           <div className="form-inputs">
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-    <label className="me-5 mt-3 mb-3">Choose an Activity:</label>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <label className="mt-3 mb-3">Choose an Activity:</label>
               <DropdownButton
                     id="activity-dropdown"
                     title={
@@ -129,8 +129,34 @@ const HomePage = () => {
                     ))}
                   </DropdownButton>
               </div>
-            <div>
-              <label className="m-3">State:</label><input type="text" />
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <label className="mt-3 mb-3">Choose a State:</label>
+            <DropdownButton
+                    id="state-dropdown"
+                    title={
+                      americanState ? americanState.label : 'Make a selection'
+                    }
+                    size="lg"
+                  >
+                    <Dropdown.Menu
+                      style={{ maxHeight: '200px', overflowY: 'scroll' }}
+                    >
+                      {stateOptions.map((option) => (
+                        <Dropdown.Item
+                          key={option.value}
+                          onClick={() => setAmericanState(option)}
+                          className={
+                            americanState &&
+                            americanState.value === option.value
+                              ? 'selected-item'
+                              : ''
+                          }
+                        >
+                          {option.label}
+                        </Dropdown.Item>
+                      ))}
+                    </Dropdown.Menu>
+                  </DropdownButton>
             </div>
             <div>
               <label className="m-3">Duration: </label><input type="text" />
