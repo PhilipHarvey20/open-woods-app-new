@@ -108,9 +108,9 @@ const HomePage = () => {
       <div className="home-form-container">
         <div className="home-form">
           <div className="form-title">Land Lease Price Calculator</div>
-          <div className="form-inputs display: flex">
-            <div>
-              <label className="m-3">Activity: </label>
+          <div className="form-inputs">
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+    <label className="me-5 mt-3 mb-3">Choose an Activity:</label>
               <DropdownButton
                     id="activity-dropdown"
                     title={

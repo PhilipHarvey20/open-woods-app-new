@@ -5,6 +5,22 @@
   width: 100vw;
 }
 
+.home-form {
+  border: 3px solid rgb(152, 151, 151);
+  height: 80%;
+  width: 80;
+  margin: 1rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-form-container {
+  border: 1px solid green;
+  height: 90vh;
+  width: 50%;
+}
+
 .form-title {
   font-size: 250%;
   padding: 1rem;
@@ -15,14 +31,13 @@
   }
 
 .form-inputs {
-  display: flex;
   flex-direction: column;
   align-items: start; /* Change to left alignment */
   font-family: 'Lato';
   font-size: 150%; /* increased font size */
   font-weight: 500; /* bold font weight */
-padding-left: 1rem;
-padding-right: 1rem;
+padding-left: 8rem;
+padding-right: 2rem;
 padding-top: 2rem;   
 padding-bottom: 2rem;   
 
@@ -42,21 +57,7 @@ padding-bottom: 2rem;
   width: 15%;
 }
 
-.home-form {
-  border: 3px solid rgb(152, 151, 151);
-  height: 80%;
-  width: 80;
-  margin: 1rem;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-}
 
-.home-form-container {
-  border: 1px solid green;
-  height: 90vh;
-  width: 50%;
-}
 
 .home-input-labels {
   display: flex;
