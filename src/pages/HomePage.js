@@ -107,214 +107,239 @@ const HomePage = () => {
     <div className="home-container">
       <div className="home-form-container">
         <div className="home-form">
-        <Form>
+          <Form>
 
-          <div className="form-title">Land Lease Price Calculator</div>
-          <div className="form-inputs">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <label className="mt-3 mb-3">Choose an Activity:</label>
-              <DropdownButton
-                    id="activity-dropdown"
-                    title={
-                      activityOption ? activityOption.label : 'Make a selection'
-                    }
-                    menuVariant="dark"
-                    size="lg"
+            <div className="form-title">Land Lease Price Calculator</div>
+            <div className="form-inputs">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <label className="mt-3 mb-3">Choose an Activity:</label>
+                <DropdownButton
+                  id="activity-dropdown"
+                  title={
+                    activityOption ? activityOption.label : 'Make a selection'
+                  }
+                  menuVariant="dark"
+                  size="lg"
+                >
+                  {activityOptions.map((option) => (
+                    <Dropdown.Item
+                      key={option.value}
+                      onClick={() => setActivityOption(option)}
+                    >
+                      {option.label}
+                    </Dropdown.Item>
+                  ))}
+                </DropdownButton>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <label className="mt-3 mb-3">Choose a State:</label>
+                <DropdownButton
+                  id="state-dropdown"
+                  title={
+                    americanState ? americanState.label : 'Make a selection'
+                  }
+                  size="lg"
+                >
+                  <Dropdown.Menu
+                    style={{ maxHeight: '200px', overflowY: 'scroll' }}
                   >
-                    {activityOptions.map((option) => (
+                    {stateOptions.map((option) => (
                       <Dropdown.Item
                         key={option.value}
-                        onClick={() => setActivityOption(option)}
+                        onClick={() => setAmericanState(option)}
+                        className={
+                          americanState &&
+                            americanState.value === option.value
+                            ? 'selected-item'
+                            : ''
+                        }
                       >
                         {option.label}
                       </Dropdown.Item>
                     ))}
-                  </DropdownButton>
+                  </Dropdown.Menu>
+                </DropdownButton>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <label className="mt-3 mb-3">Choose a State:</label>
-            <DropdownButton
-                    id="state-dropdown"
-                    title={
-                      americanState ? americanState.label : 'Make a selection'
-                    }
-                    size="lg"
-                  >
-                    <Dropdown.Menu
-                      style={{ maxHeight: '200px', overflowY: 'scroll' }}
-                    >
-                      {stateOptions.map((option) => (
-                        <Dropdown.Item
-                          key={option.value}
-                          onClick={() => setAmericanState(option)}
-                          className={
-                            americanState &&
-                            americanState.value === option.value
-                              ? 'selected-item'
-                              : ''
-                          }
-                        >
-                          {option.label}
-                        </Dropdown.Item>
-                      ))}
-                    </Dropdown.Menu>
-                  </DropdownButton>
+
+
+
+              <div>
+                <Form.Group
+                  style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+                  controlId="exampleForm.ControlInput2">
+                  <label className="mt-3 mb-3">Select Duration:</label>
+                  <Form.Control
+                  className="mt-3 mb-3"
+                  style={{ flex: '0 0 40%' }}
+                    type="number"
+                    size='lg'
+                    width={1}
+
+                    placeholder="Enter duration"
+                    value={duration}
+                    onChange={(e) => setDuration(e.target.value)}
+                  />
+                </Form.Group>
+              </div>
+
+
+              <div>
+                <Form.Group
+                  style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+                  controlId="exampleForm.ControlInput2">
+                  <label className="mt-3 mb-3">Select Acreage:</label>
+                  <Form.Control
+                  className="mt-3 mb-3"
+                  style={{ flex: '0 0 40%' }}
+                    type="number"
+                    size='lg'
+                    placeholder="Enter acreage"
+                    value={acreage}
+                    onChange={(e) => setAcreage(e.target.value)}
+                  />
+                </Form.Group>
+              </div>
+
+
+
+
+
+             
+              <Button>Submit
+              </Button>
             </div>
-
-
-
-            <div>
-            <Form.Group 
-            tyle={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
-            controlId="exampleForm.ControlInput2">
-            <label className="mt-3 mb-3">Choose a State:</label>
-        <Form.Control
-          type="number"
-          size = "lg"
-          placeholder="Enter duration"
-          value={duration}
-          onChange={(e) => setDuration(e.target.value)}
-        />
-      </Form.Group>
+            <div className="form-output">
+              <div>
+                <label>Total Price:</label>
+                <input className="total-price-input mx-2" type="text" />
+              </div>
             </div>
-
-
-            <div>
-              <label className="m-3">Acreage </label><input type="text" />
-            </div>
-            <Button>Submit</Button>
-          </div>
-          <div className="form-output">
-            <div>
-              <label>Total Price:</label>
-              <input className="total-price-input mx-2" type="text" />
-            </div>
-          </div>
+          </Form>
         </div>
       </div>
       <div className="home-map-container">
         <SatelliteMap address={address} />
       </div>
     </div>
-//     <>
-//       {/* <MetaTags title="Home" description="Home page" /> */}
-//       <>
-//         <Form onSubmit={onSubmit}>
-//           <div className="col-md-6 d-flex ">
-//             <div className="w-50">
-//               <div className="form-group pl-2 pr-1 dropdown-container">
-//                 <label
-//                   htmlFor="activity"
-//                   className=".form-group label {
-// "
-//                 >
-//                   Choose an activity
-//                 </label>
-//                 <div className="dropdown-button">
-//                   <DropdownButton
-//                     id="activity-dropdown"
-//                     title={
-//                       activityOption ? activityOption.label : 'Make a selection'
-//                     }
-//                     menuVariant="dark"
-//                     size="lg"
-//                   >
-//                     {activityOptions.map((option) => (
-//                       <Dropdown.Item
-//                         key={option.value}
-//                         onClick={() => setActivityOption(option)}
-//                       >
-//                         {option.label}
-//                       </Dropdown.Item>
-//                     ))}
-//                   </DropdownButton>
-//                 </div>
-//               </div>
+    //     <>
+    //       {/* <MetaTags title="Home" description="Home page" /> */}
+    //       <>
+    //         <Form onSubmit={onSubmit}>
+    //           <div className="col-md-6 d-flex ">
+    //             <div className="w-50">
+    //               <div className="form-group pl-2 pr-1 dropdown-container">
+    //                 <label
+    //                   htmlFor="activity"
+    //                   className=".form-group label {
+    // "
+    //                 >
+    //                   Choose an activity
+    //                 </label>
+    //                 <div className="dropdown-button">
+    //                   <DropdownButton
+    //                     id="activity-dropdown"
+    //                     title={
+    //                       activityOption ? activityOption.label : 'Make a selection'
+    //                     }
+    //                     menuVariant="dark"
+    //                     size="lg"
+    //                   >
+    //                     {activityOptions.map((option) => (
+    //                       <Dropdown.Item
+    //                         key={option.value}
+    //                         onClick={() => setActivityOption(option)}
+    //                       >
+    //                         {option.label}
+    //                       </Dropdown.Item>
+    //                     ))}
+    //                   </DropdownButton>
+    //                 </div>
+    //               </div>
 
-//               <div className="form-group pl-2 pr-1 dropdown-container">
-//                 <label htmlFor="state" className="mr-2">
-//                   Choose a state
-//                 </label>
-//                 <div className="dropdown-button">
-//                   <DropdownButton
-//                     id="state-dropdown"
-//                     title={
-//                       americanState ? americanState.label : 'Make a selection'
-//                     }
-//                     size="lg"
-//                   >
-//                     <Dropdown.Menu
-//                       style={{ maxHeight: '200px', overflowY: 'scroll' }}
-//                     >
-//                       {stateOptions.map((option) => (
-//                         <Dropdown.Item
-//                           key={option.value}
-//                           onClick={() => setAmericanState(option)}
-//                           className={
-//                             americanState &&
-//                             americanState.value === option.value
-//                               ? 'selected-item'
-//                               : ''
-//                           }
-//                         >
-//                           {option.label}
-//                         </Dropdown.Item>
-//                       ))}
-//                     </Dropdown.Menu>
-//                   </DropdownButton>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//           <div className="button-container">
-//             <button className="decrement-button" onClick={decrementAcreage}>
-//               <BsDash />
-//             </button>
-//             <input
-//               className="input-field"
-//               type="number"
-//               id="acreage"
-//               name="acreage"
-//               min="0"
-//               value={acreage}
-//               onChange={(e) => {
-//                 setAcreage(e.target.value)
-//                 // onChange(e.target.value)
-//               }}
-//             />
-//             <button className="increment-button" onClick={incrementAcreage}>
-//               <BsPlus />
-//             </button>
-//           </div>
+    //               <div className="form-group pl-2 pr-1 dropdown-container">
+    //                 <label htmlFor="state" className="mr-2">
+    //                   Choose a state
+    //                 </label>
+    //                 <div className="dropdown-button">
+    //                   <DropdownButton
+    //                     id="state-dropdown"
+    //                     title={
+    //                       americanState ? americanState.label : 'Make a selection'
+    //                     }
+    //                     size="lg"
+    //                   >
+    //                     <Dropdown.Menu
+    //                       style={{ maxHeight: '200px', overflowY: 'scroll' }}
+    //                     >
+    //                       {stateOptions.map((option) => (
+    //                         <Dropdown.Item
+    //                           key={option.value}
+    //                           onClick={() => setAmericanState(option)}
+    //                           className={
+    //                             americanState &&
+    //                             americanState.value === option.value
+    //                               ? 'selected-item'
+    //                               : ''
+    //                           }
+    //                         >
+    //                           {option.label}
+    //                         </Dropdown.Item>
+    //                       ))}
+    //                     </Dropdown.Menu>
+    //                   </DropdownButton>
+    //                 </div>
+    //               </div>
+    //             </div>
+    //           </div>
+    //           <div className="button-container">
+    //             <button className="decrement-button" onClick={decrementAcreage}>
+    //               <BsDash />
+    //             </button>
+    //             <input
+    //               className="input-field"
+    //               type="number"
+    //               id="acreage"
+    //               name="acreage"
+    //               min="0"
+    //               value={acreage}
+    //               onChange={(e) => {
+    //                 setAcreage(e.target.value)
+    //                 // onChange(e.target.value)
+    //               }}
+    //             />
+    //             <button className="increment-button" onClick={incrementAcreage}>
+    //               <BsPlus />
+    //             </button>
+    //           </div>
 
-//           {/* <div className="form-group col-4 pl-2 pr-1">
-//             <label htmlFor="duration">Duration</label>
-//             <NumberField
-//               className="form-control"
-//               name="duration"
-//               validation={{ required: true, pattern: { value: /^[1-9]\d*$/ } }}
-//               onChange={(e) => setDuration(e.target.value)}
-//             />
-//           </div> */}
-//           <div className="form-group col-4 pl-2 pr-1">
-//             <label htmlFor="address">Address</label>
-//             <AddressField setAddress={setAddress} />
-//           </div>
-//           {/* cut here */}
+    //           {/* <div className="form-group col-4 pl-2 pr-1">
+    //             <label htmlFor="duration">Duration</label>
+    //             <NumberField
+    //               className="form-control"
+    //               name="duration"
+    //               validation={{ required: true, pattern: { value: /^[1-9]\d*$/ } }}
+    //               onChange={(e) => setDuration(e.target.value)}
+    //             />
+    //           </div> */}
+    //           <div className="form-group col-4 pl-2 pr-1">
+    //             <label htmlFor="address">Address</label>
+    //             <AddressField setAddress={setAddress} />
+    //           </div>
+    //           {/* cut here */}
 
-//           <div>
-//             <p className="final-price">
-//               $ <CountUp start={0} end={finalPrice} duration={0.33} />{' '}
-//             </p>
-//             <button onClick={handleClick}>Submit</button>
-//             <></>
-//           </div>
-//           <div className="map-container">
-//             <SatelliteMap address={address} />
-//           </div>
-//         </Form>
-//       </>
-//     </>
+    //           <div>
+    //             <p className="final-price">
+    //               $ <CountUp start={0} end={finalPrice} duration={0.33} />{' '}
+    //             </p>
+    //             <button onClick={handleClick}>Submit</button>
+    //             <></>
+    //           </div>
+    //           <div className="map-container">
+    //             <SatelliteMap address={address} />
+    //           </div>
+    //         </Form>
+    //       </>
+    //     </>
   )
 }
 
