@@ -19,8 +19,8 @@
   justify-content: center;
   border: 3px solid rgb(152, 151, 151);
   height: 90%;
-  width: 80;
-  margin: 1rem;
+  margin: 2em;
+  width: 100%;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -43,8 +43,8 @@
   font-family: 'Lato';
   font-size: 150%; /* increased font size */
   font-weight: 500; /* bold font weight */
-padding-left: 4rem;
-padding-right: 4rem;
+padding-left: 6rem;
+padding-right: 6rem;
 padding-top: 2rem;   
 padding-bottom: 2rem;   
 
@@ -182,43 +182,6 @@ img {
 
 
 
-/* Acreage and Duration */
-.button-container {
-  display: flex;
-  justify-content: center; /* center horizontally */
-  align-items: center; /* center vertically */
-  margin-top: 30px;
-  margin-bottom: 30px;
-  position: relative; /* make position relative to its parent container */
-  left: 400px; /* set the left position to 240px */
-  width: 15%;
-  /* OR */
-  /* left: 23%; */ /* set the left position to 23% of the parent container */
-}
-
-/* Acreage and Duration */
-.increment-button {
-  border-radius: 0 4px 4px 0;
-  background-color: rgb(190, 121, 72);
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 8px;
-  border: none;
-  outline: none;
-}
-
-/* Acreage and Duration */
-.decrement-button {
-  border-radius: 4px 0 0 4px;
-  background-color: rgb(190, 121, 72);
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 8px;
-  border: none;
-  outline: none;
-}
 
 /* Acreage and Duration */
 .input-field {
