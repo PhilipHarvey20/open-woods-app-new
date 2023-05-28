@@ -5,9 +5,20 @@
   width: 100vw;
 }
 
+.home-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid green;
+  height: 90vh;
+  width: 50%;
+}
+
 .home-form {
+  display: flex;
+  justify-content: center;
   border: 3px solid rgb(152, 151, 151);
-  height: 80%;
+  height: 90%;
   width: 80;
   margin: 1rem;
   border-radius: 15px;
@@ -15,11 +26,7 @@
   flex-direction: column;
 }
 
-.home-form-container {
-  border: 1px solid green;
-  height: 90vh;
-  width: 50%;
-}
+
 
 .form-title {
   font-size: 250%;
