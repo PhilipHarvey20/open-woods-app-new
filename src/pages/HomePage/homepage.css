@@ -10,10 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
   display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid green;
   height: 90vh;
   width: 50%;
@@ -21,14 +18,17 @@
 }
 
 .home-form {
+  align-items: top;
+  background-color: white;
   display: flex;
   justify-content: center;
   border: 3px solid rgb(152, 151, 151);
-  height: 90%;
-  margin: 2em;
+  height: 70%;
+  margin: 3em;
   width: 100%;
   border-radius: 5px;
   display: flex;
+  
   flex-direction: column;
 }
 
@@ -63,8 +63,12 @@ padding-bottom: 2rem;
 }
 
 .form-output {
-  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
 }
+
 
 .total-price-input {
   width: 15%;

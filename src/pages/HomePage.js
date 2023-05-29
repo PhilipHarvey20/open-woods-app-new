@@ -118,13 +118,12 @@ const HomePage = () => {
 
   return (
     <div className="home-container">
-    <div className="home-form-container">
+      <div className="home-form-container">
         <div className="home-form">
           <Form>
-
             <div className="form-title">Land Lease Price Calculator</div>
             <div className="form-inputs">
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <label className="mt-3 mb-3">Choose an Activity:</label>
                 <DropdownButton
                 className = "dropdown-button"
@@ -176,9 +175,6 @@ const HomePage = () => {
                   </Dropdown.Menu>
                 </DropdownButton>
               </div>
-
-
-
               <div>
                 <Form.Group
                   style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
@@ -224,18 +220,19 @@ const HomePage = () => {
               <Button>Submit
               </Button>
             </div>
-            <div className="form-output">
-              <div>
-                <label>Total Price:</label>
-                <input className="total-price-input mx-2" type="text" />
-              </div>
-            </div>
+           
           </Form>
         </div>
+      <div className="form-output">
+        <div>
+                <label>Total Price:</label>
+                <input className="total-price-input mx-2" type="text" />
+        </div>
+      </div>
       </div>
       <div className="home-map-container">
         <SatelliteMap address={address} />
-      </div>
+    </div>
     </div>
     //     <>
     //       {/* <MetaTags title="Home" description="Home page" /> */}
