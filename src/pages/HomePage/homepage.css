@@ -6,8 +6,11 @@
 }
 
 .home-form-container {
-  background-image: url('https://github.com/PhilipHarvey20/open-woods-app-new/blob/master/src/images/woods_background.jpg');
+  background-image: url('/Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/images/woods_background.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+
   display: flex;
   justify-content: center;
   align-items: center;
