@@ -10,10 +10,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  align-items: center;
   display: flex;
+  padding: 3rem;
   border: 1px solid green;
   height: 90vh;
   width: 50%;
+  flex-direction: column;
+
 
 }
 
@@ -23,8 +27,7 @@
   display: flex;
   justify-content: center;
   border: 3px solid rgb(152, 151, 151);
-  height: 70%;
-  margin: 3em;
+  height: 80%;
   width: 100%;
   border-radius: 5px;
   display: flex;
@@ -63,10 +66,19 @@ padding-bottom: 2rem;
 }
 
 .form-output {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  align-items: center;
+    background-color: white;
+    display: flex;
+    margin: 4rem;
+    justify-content: center;
+    align-items: center;
+    width: 40% !important;
+    border: 3px solid rgb(152, 151, 151);
+    height: 10%;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    
+    flex-direction: column;
 }
 
 

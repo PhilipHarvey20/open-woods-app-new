@@ -220,14 +220,14 @@ const HomePage = () => {
               <Button>Submit
               </Button>
             </div>
-            <div className="form-output">
-        <div>
-                <label>Total Price:</label>
-                <input className="total-price-input mx-2" type="text" />
-        </div>
-      </div>
+           
           </Form>
         </div>
+        <div className="form-output">
+      
+                <label>Total Price:</label>
+                <input className="total-price-input mx-2" type="text" />
+      </div>
    
       </div>
       <div className="home-map-container">
