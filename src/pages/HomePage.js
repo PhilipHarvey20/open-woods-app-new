@@ -220,15 +220,15 @@ const HomePage = () => {
               <Button>Submit
               </Button>
             </div>
-           
-          </Form>
-        </div>
-      <div className="form-output">
+            <div className="form-output">
         <div>
                 <label>Total Price:</label>
                 <input className="total-price-input mx-2" type="text" />
         </div>
       </div>
+          </Form>
+        </div>
+   
       </div>
       <div className="home-map-container">
         <SatelliteMap address={address} />
