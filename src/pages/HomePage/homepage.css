@@ -29,7 +29,7 @@
   border-radius: 25px !important;
   display: flex;
   justify-content: center;
-  border: 3px solid rgb(152, 151, 151);
+  /* border: 3px solid rgb(152, 151, 151); */
   height: 80%;
   width: 100%;
   border-radius: 5px;
@@ -46,13 +46,13 @@
     font-weight: 600; /* bold font weight */
     letter-spacing: 1px; /* increased letter spacing */
     line-height: 1; /* reduced line height */
-    font-family: 'Lato', sans-serif; 
+    font-family: 'Monteresat', sans-serif; 
   }
 
 .form-inputs {
   flex-direction: column;
   align-items: start; /* Change to left alignment */
-  font-family: 'Lato';
+  font-family: 'Monteresat', sans-serif; 
   font-size: 150%; /* increased font size */
   font-weight: 500; /* bold font weight */
 padding-left: 6rem;
@@ -76,10 +76,9 @@ padding-bottom: 2rem;
     justify-content: center;
     align-items: center;
     width: 40% !important;
-    border: 3px solid rgb(152, 151, 151);
+    /* border: 3px solid rgb(152, 151, 151); */
     height: 10%;
     width: 100%;
-    border-radius: 5px;
     display: flex;
     
     flex-direction: column;
@@ -158,12 +157,12 @@ img {
 
 /* Activity and State */
 .dropdown-button .dropdown-toggle {
-  background-color: #778184ff;
+  background-color:#3588d6;
   height: 40px;
   outline: none;
   box-shadow: none;
   border-radius: 0.5rem; /* Add rounded corners */
-  border-color: #778184ff; /* Set the custom outline color */
+  border-color: #3588d6; /* Set the custom outline color */
 
 }
 
