@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Container } from 'react-bootstrap';
+
 // import { onChange } from 'react-native'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -17,7 +19,7 @@ import { activityOptions } from './ActivityOptions'
 import AddressField from '../components/Address_Field/AddressField';
 import '../components/Address_Field/AddressField.css';
 
-
+import woodsBackground from '../images/woods_background.jpg'; // Import the image
 
 //  ****** MAP ***********
 import SatelliteMap from '../components/Satelite_Map/Satelite_Map'
@@ -41,6 +43,18 @@ const HomePage = () => {
     CalcThenDisplayPrice()
     setAddress(address)
   }
+  const containerStyle = {
+    backgroundImage: `url(${woodsBackground})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '90vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    border: '1px solid green',
+  };
+
+
 
   // *****NEW ADDRESS FILE *****
   const [address, setAddress] = React.useState('')
@@ -104,7 +118,7 @@ const HomePage = () => {
 
   return (
     <div className="home-container">
-      <div className="home-form-container">
+    <div className="home-form-container">
         <div className="home-form">
           <Form>
 

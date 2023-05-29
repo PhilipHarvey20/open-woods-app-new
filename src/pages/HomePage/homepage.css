@@ -6,12 +6,15 @@
 }
 
 .home-form-container {
+  background-image: url('https://github.com/PhilipHarvey20/open-woods-app-new/blob/master/src/images/woods_background.jpg');
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid green;
   height: 90vh;
   width: 50%;
+
 }
 
 .home-form {
