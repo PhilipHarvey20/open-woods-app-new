@@ -110,7 +110,7 @@ const HomePage = () => {
 
   const decrementAcreage = () => {
     const newValue = parseFloat(acreage) - 1
-    if (newValue >= 0) {
+    if (newValue >= 0) { 
       setAcreage(newValue.toString())
       // onChange(newValue.toString())
     }
