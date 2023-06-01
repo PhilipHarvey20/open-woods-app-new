@@ -205,9 +205,9 @@ img {
 
 /* Activity and State */
 .dropdown-button .dropdown-toggle:active {
-  background-color: #a0ab8aff;
+  background-color: #af4f3dff;
   box-shadow: none;
-  border-color:  #a0ab8aff; /* Set the custom outline color */
+  border-color:  #af4f3dff;/* Set the custom outline color */
 }
 /* Activity and State */
 .selected-item {
