@@ -34,17 +34,16 @@
   width: 100%;
   border-radius: 5px;
   display: flex;
-  
   flex-direction: column;
 }
 
 
 
 .form-title {
-  font-size: 250%;
+  font-size: 200%;
   padding: 2rem;
     font-weight: 600; /* bold font weight */
-    letter-spacing: 1px; /* increased letter spacing */
+    letter-spacing: 0px; /* increased letter spacing */
     line-height: 1; /* reduced line height */
     font-family: 'Monteresat', sans-serif; 
   }
@@ -57,8 +56,8 @@
   font-weight: 500; /* bold font weight */
 padding-left: 6rem;
 padding-right: 6rem;
-padding-top: 2rem;   
-padding-bottom: 2rem;   
+/* padding-top: 2rem;   
+padding-bottom: 4rem;    */
 
 }
 
@@ -68,21 +67,52 @@ padding-bottom: 2rem;
   margin-bottom: 1rem;
 }
 
-.form-output {
+
+.submit-button {
+  display: flex;
+  color: white;
+  background-color:  #5cc87dff;
+border-color: #5cc87dff;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+/* padding-bottom: 2rem  ;    */
+}
+
+.submit-button .submit-toggle:focus .submit-button:hover {
+  background-color: #a0ab8aff;
+  box-shadow: none;
+  border-color:  #a0ab8aff; /* Set the custom outline color */
+}
+
+
+.form-output-container {
+  flex-direction: row;
+  width:100%;
+  justify-content: 'space-between';
+  align-items: center;
     background-color: white;
     display: flex;
-    margin: 4rem;
+    padding: 0;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-left: 2em;
+    margin-right: 2em;
+
+    .price-output {
+    }
+
+   
+
+
     border-radius: 25px !important;
-    justify-content: center;
-    align-items: center;
     width: 40% !important;
     /* border: 3px solid rgb(152, 151, 151); */
     height: 10%;
     width: 100%;
     display: flex;
-    
-    flex-direction: column;
-}
+
+  }
 
 
 .total-price-input {
@@ -152,17 +182,17 @@ img {
 
 /* Activity and State */
 .dropdown-button {
-  color: #778184ff;
+  color:#fe7159ff;
 }
 
 /* Activity and State */
 .dropdown-button .dropdown-toggle {
-  background-color:#3588d6;
+  background-color: #fe7159ff;
   height: 40px;
   outline: none;
   box-shadow: none;
   border-radius: 0.5rem; /* Add rounded corners */
-  border-color: #3588d6; /* Set the custom outline color */
+  border-color: #fe7159ff; /* Set the custom outline color */
 
 }
 
@@ -170,14 +200,14 @@ img {
 .dropdown-button .dropdown-toggle:focus {
   outline: none;
   box-shadow: none;
-  border-color: #778184ff; /* Set the custom outline color */
+    border-color: #fe7159ff; /* Set the custom outline color */
 }
 
 /* Activity and State */
 .dropdown-button .dropdown-toggle:active {
   background-color: #a0ab8aff;
   box-shadow: none;
-  border-color: #778184ff; /* Set the custom outline color */
+  border-color:  #a0ab8aff; /* Set the custom outline color */
 }
 /* Activity and State */
 .selected-item {

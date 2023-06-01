@@ -121,7 +121,7 @@ const HomePage = () => {
       <div className="home-form-container">
         <div className="home-form">
           <Form>
-            <div className="form-title">Land Lease Price Calculator</div>
+            <div className="form-title">LAND LEASE PRICE CALCULATOR</div>
             <div className="form-inputs">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <label className="mt-3 mb-3">Choose an Activity:</label>
@@ -211,24 +211,37 @@ const HomePage = () => {
                   />
                 </Form.Group>
               </div>
-
-
-
-
-
-             
-              <Button>Submit
-              </Button>
             </div>
-           
+       
+
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem'}}>
+            {/* <Button variant="primary" size="lg" color= 'green' onClick={handleClick} */}
+
+      <Button type="submit" size='lg' onClick={handleClick} 
+      className = "submit-button"
+
+      >
+        Submit
+      </Button>
+
+                        
+            {/* type='submit' */}
+            {/* className='submit-button'  */}
+            {/* size = 'lg' */}
+{/* color='submit'           
+   Submit> */}
+            </div>
           </Form>
         </div>
-        <div className="form-output">
-      
-                <label>Total Price:</label>
-                <input className="total-price-input mx-2" type="text" />
+       
+
+
+      <div className=".form-output-container">
+        <div className="'display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: 100%">
+        <label className="mt-3 mb-3">Final Price: $ <CountUp start={0} end={finalPrice} duration={0.33} />{' '}   </label>
+        </div>
       </div>
-   
+
       </div>
       <div className="home-map-container">
         <SatelliteMap address={address} />
