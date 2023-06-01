@@ -131,7 +131,7 @@ const HomePage = () => {
                   title={
                     activityOption ? activityOption.label : 'Make a selection'
                   }
-                  menuVariant="dark"
+                  // menuVariant="dark"
                   size="lg"
                   style={{ color: '#778184ff' }} 
                 >
@@ -154,6 +154,7 @@ const HomePage = () => {
                     americanState ? americanState.label : 'Make a selection'
                   }
                   size="lg"
+
                 >
                   <Dropdown.Menu
                     style={{ maxHeight: '200px', overflowY: 'scroll' }}
