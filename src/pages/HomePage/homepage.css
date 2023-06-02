@@ -1,5 +1,5 @@
 .home-container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 90vh;
   display: flex;
   width: 100vw;
@@ -15,7 +15,7 @@
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 3rem;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   height: 90vh;
   width: 50%;
   flex-direction: column;

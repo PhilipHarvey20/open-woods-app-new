@@ -11,7 +11,7 @@ function App() {
         <Navbar className="navbar" expand="lg" >
           <Navbar.Brand href="#home" className="logo-container">
             <img
-              src={process.env.PUBLIC_URL + "/images/Open_Woods_Logo_Orange_Black.svg"}
+              src={process.env.PUBLIC_URL + "/images/OpenWoods_Logo_Salmon_Light_Blue.svg"}
               className="logo"
               alt="Your Logo"
             />

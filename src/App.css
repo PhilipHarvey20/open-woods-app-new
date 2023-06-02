@@ -3,7 +3,7 @@
 }
 
 .navbar {
-  background-color: #64705f;
+  background-color: #3e8ca4ff;
   height: 10vh; /* Adjust the height of the navbar as needed */
   padding: 0; /* Remove padding inside the navbar */
   margin: 0; /* Remove margins from the navbar */
@@ -17,7 +17,7 @@
   color: #fff; /* Change the navbar brand text color */
   text-transform: uppercase; /* Make the navbar brand text uppercase */
   letter-spacing: 0.1em; /* Add letter spacing to the navbar brand text */
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   top: 0;
   left: 0;
@@ -27,14 +27,16 @@
 }
 
 .logo-container {
+height: 100%;
   display: flex;
   align-items: center;  
+  justify-content: center;
   padding: 0 60px; /* first number = top/bottom second number = left/right */
 
 }
 
 .logo {
-  width: 150px; /* Adjust the logo width as needed */
+  /* width: 150px; Adjust the logo width as needed */
   height: 100%; /* Set the height of the logo as a percentage of the navbar height */
   display: flex;
   align-items: center;
