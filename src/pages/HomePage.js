@@ -222,7 +222,7 @@ const HomePage = () => {
       className = "submit-button"
 
       >
-        Submit
+        Generate Price
       </Button>
 
                         
