@@ -223,20 +223,15 @@ const HomePage = () => {
 
       >
         Generate Price
-      </Button>
-
-                        
+      </Button>              
             {/* type='submit' */}
             {/* className='submit-button'  */}
             {/* size = 'lg' */}
-{/* color='submit'           
-   Submit> */}
-            </div>
-          </Form>
-        </div>
-       
-
-
+            {/* color='submit'           
+                Submit> */}
+      </div>
+      </Form>
+      </div>
       <div className=".form-output-container">
         <div className="'display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: 100%">
         <label className="mt-3 mb-3">Final Price: $ <CountUp start={0} end={finalPrice} duration={0.33} />{' '}   </label>
@@ -245,8 +240,11 @@ const HomePage = () => {
 
       </div>
       <div className="home-map-container">
-        <SatelliteMap address={address} />
-    </div>
+         <div className="map" >
+         <SatelliteMap address={address} />
+      </div>
+</div>
+
     </div>
     //     <>
     //       {/* <MetaTags title="Home" description="Home page" /> */}

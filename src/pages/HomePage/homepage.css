@@ -1,4 +1,8 @@
 .home-container {
+  background-image: url('/Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/images/woods_background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   /* border: 1px solid red; */
   height: 90vh;
   display: flex;
@@ -6,10 +10,10 @@
 }
 
 .home-form-container {
-  background-image: url('/Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/images/woods_background.jpg');
+  /* background-image: url('/Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/images/woods_background.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: cover; */
+  /* background-position: center; */
   align-items: center;
   display: flex;
   padding-left: 3rem;
@@ -129,10 +133,41 @@ border-color: #5cc87dff;
 }
 
 .home-map-container {
-  border: 1px solid green;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  display: flex;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 3rem;
   height: 90vh;
   width: 50%;
+  flex-direction: column;
+  /* border: 4px solid green; */
 }
+
+
+.map {
+  align-items: center;
+  background-color: white;
+  border-radius: 25px !important;
+  display: flex;
+  justify-content: center;
+  /* border: 3px solid rgb(152, 151, 151); */
+  height: 70%;
+  width: 90%;
+  /* border-radius: 5px; */
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
 
 /* make homepage light grey */
 

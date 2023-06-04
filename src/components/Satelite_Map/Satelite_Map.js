@@ -74,12 +74,12 @@ function SatelliteMap({ address }) {
     }
   }, [address])
 
+
+
   return (
-    <div className="map-container">
-      <div id="map" className="map" />
-      {/* <div id="calculated-area" /> */}
-    </div>
+    <div id="map" className="map" />
   )
+
 }
 
 export default SatelliteMap
