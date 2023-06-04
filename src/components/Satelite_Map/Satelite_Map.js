@@ -13,7 +13,7 @@ function SatelliteMap({ address }) {
 
   useEffect(() => {
     const draw = new MapboxDraw({
-      displayControlsDefault: false,
+      displayControlsDefault: true,
       controls: {
         polygon: true,
         trash: true,
@@ -40,6 +40,9 @@ function SatelliteMap({ address }) {
       style: 'mapbox://styles/mapbox/satellite-v9',
       center: lngLat,
       zoom: 16,
+      addControl: draw,
+      
+      
     })
 
     map.addControl(draw)

@@ -241,6 +241,8 @@ const HomePage = () => {
       </div>
       <div className="home-map-container">
          <div className="map" >
+         <button class="mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon" title="Polygon tool (p)"></button>
+
          <SatelliteMap address={address} />
       </div>
 </div>

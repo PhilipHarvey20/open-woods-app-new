@@ -24,7 +24,6 @@
   width: 50%;
   flex-direction: column;
 
-
 }
 
 .home-form {
@@ -40,8 +39,6 @@
   display: flex;
   flex-direction: column;
 }
-
-
 
 .form-title {
   font-size: 200%;
@@ -106,16 +103,12 @@ border-color: #5cc87dff;
     .price-output {
     }
 
-   
-
-
     border-radius: 25px !important;
     width: 40% !important;
     /* border: 3px solid rgb(152, 151, 151); */
     height: 10%;
     width: 100%;
     display: flex;
-
   }
 
 
@@ -133,41 +126,62 @@ border-color: #5cc87dff;
 }
 
 .home-map-container {
+  display: flex;
+  flex-direction: column;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   align-items: center;
-  display: flex;
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 3rem;
   height: 90vh;
   width: 50%;
-  flex-direction: column;
+
   /* border: 4px solid green; */
 }
 
-
 .map {
-  align-items: center;
-  background-color: white;
-  border-radius: 25px !important;
-  display: flex;
-  justify-content: center;
-  /* border: 3px solid rgb(152, 151, 151); */
-  height: 70%;
-  width: 90%;
-  /* border-radius: 5px; */
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  width: 90%;
+  background-color: white;
+  border-radius: 25px !important;
+  border: 3px red;
+  /* border-radius: 5px; */
+
+}
+
+.map .mapboxgl-ctrl { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: bottom;
+  /* border: 4px solid red; */
+  /* background-color: #ffffff;
+  border-radius: 5px; */
+  font-size: 12px;
+  color: #333333;
+}
+
+mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: ce;
 }
 
 
-
-
-
-
-
+<button class="mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon" title="Polygon tool (p)"></button>
+<div class="mapboxgl-ctrl-bottom-left"><div class="mapboxgl-ctrl" style="display: block;"><a class="mapboxgl-ctrl-logo" target="_blank" rel="noopener nofollow" href="https://www.mapbox.com/" aria-label="Mapbox logo"></a></div></div>
+<div class="mapboxgl-ctrl-bottom-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-attrib mapboxgl-compact mapboxgl-compact-show"><button class="mapboxgl-ctrl-attrib-button" type="button" aria-label="Toggle attribution" aria-expanded="true"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Toggle attribution"></span></button><div class="mapboxgl-ctrl-attrib-inner" role="list"><a href="https://www.mapbox.com/about/maps/" target="_blank" title="Mapbox" aria-label="Mapbox" role="listitem">© Mapbox</a> <a href="https://www.openstreetmap.org/about/" target="_blank" title="OpenStreetMap" aria-label="OpenStreetMap" role="listitem">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://apps.mapbox.com/feedback/?owner=mapbox&amp;id=satellite-v9&amp;access_token=pk.eyJ1Ijoib3Blbndvb2RzIiwiYSI6ImNsZjNjaXg2MzBtNDgzb28xN2N6ZDNiM3IifQ.IyWyuTKi7EivffZkjFRpXQ#/-86.85288/33.329108/16" target="_blank" aria-label="Map feedback" role="listitem" rel="noopener nofollow">Improve this map</a> <a href="https://www.maxar.com/" target="_blank" title="Maxar" aria-label="Maxar" role="listitem">© Maxar</a></div></div></div>
+/* <button class="mapboxgl-ctrl-attrib-button" type="button" aria-label="Toggle attribution" aria-expanded="true"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Toggle attribution"></span></button> */
+<button class="mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_trash" title="Delete"></button>
+<div class="mapboxgl-ctrl mapboxgl-ctrl-attrib mapboxgl-compact mapboxgl-compact-show"><button class="mapboxgl-ctrl-attrib-button" type="button" aria-label="Toggle attribution" aria-expanded="true"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Toggle attribution"></span></button><div class="mapboxgl-ctrl-attrib-inner" role="list"><a href="https://www.mapbox.com/about/maps/" target="_blank" title="Mapbox" aria-label="Mapbox" role="listitem">© Mapbox</a> <a href="https://www.openstreetmap.org/about/" target="_blank" title="OpenStreetMap" aria-label="OpenStreetMap" role="listitem">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://apps.mapbox.com/feedback/?owner=mapbox&amp;id=satellite-v9&amp;access_token=pk.eyJ1Ijoib3Blbndvb2RzIiwiYSI6ImNsZjNjaXg2MzBtNDgzb28xN2N6ZDNiM3IifQ.IyWyuTKi7EivffZkjFRpXQ#/-86.85288/33.329108/16" target="_blank" aria-label="Map feedback" role="listitem" rel="noopener nofollow">Improve this map</a> <a href="https://www.maxar.com/" target="_blank" title="Maxar" aria-label="Maxar" role="listitem">© Maxar</a></div></div>
 
 /* make homepage light grey */
 
