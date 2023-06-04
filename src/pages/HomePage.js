@@ -237,15 +237,7 @@ const HomePage = () => {
 
       </div>
       <div className="home-map-container">
-
-      <div className = "empty-div-for-spacing">
-      </div>
-
-
-
-
-
-         <div className="map" >
+         <div className="map mapboxgl-canvas">
          <SatelliteMap 
         id="map"
         style="mapbox://styles/mapbox/satellite-v9"
