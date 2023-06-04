@@ -117,7 +117,8 @@ const HomePage = () => {
   }
 
   return (
-    <div className="home-container">
+    <div className ="home-container">
+    <div className="home-input-container">
       <div className="home-form-container">
         <div className="home-form">
           <Form>
@@ -232,22 +233,40 @@ const HomePage = () => {
       </div>
       </Form>
       </div>
+  
+
+      </div>
+      <div className="home-map-container">
+
+      <div className = "empty-div-for-spacing">
+      </div>
+
+
+
+
+
+         <div className="map" >
+         <SatelliteMap 
+        id="map"
+        style="mapbox://styles/mapbox/satellite-v9"
+        center={[-95.7129, 37.0902]}
+         address={address} />
+         <button class="mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon" title="Polygon tool (p)"></button>
+      </div>
+         </div>
+
+        </div>
+      <div className = "output-price-land-breadkwon">
       <div className=".form-output-container">
         <div className="'display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: 100%">
         <label className="mt-3 mb-3">Final Price: $ <CountUp start={0} end={finalPrice} duration={0.33} />{' '}   </label>
         </div>
       </div>
-
-      </div>
-      <div className="home-map-container">
-         <div className="map" >
-         <button class="mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon" title="Polygon tool (p)"></button>
-
-         <SatelliteMap address={address} />
-      </div>
-</div>
-
     </div>
+  </div>
+
+
+
     //     <>
     //       {/* <MetaTags title="Home" description="Home page" /> */}
     //       <>

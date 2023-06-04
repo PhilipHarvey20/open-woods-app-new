@@ -28,6 +28,8 @@
 
 .logo-container {
 height: 100%;
+  width: 15%;
+  padding: 0 60px !important; /* Remove padding inside the navbar */
   display: flex;
   align-items: center;  
   justify-content: center;
@@ -37,6 +39,7 @@ height: 100%;
 
 .logo {
   /* width: 150px; Adjust the logo width as needed */
+  padding: 0; /* Remove padding inside the navbar */
   height: 100%; /* Set the height of the logo as a percentage of the navbar height */
   display: flex;
   align-items: center;
