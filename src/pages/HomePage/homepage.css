@@ -39,7 +39,6 @@
   height: 75vh;
   width: 50%;
   flex-direction: column;
-
 }
 
 .home-form {
@@ -159,7 +158,7 @@ mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon
   width: 20%;
   justify-content: center;
   align-items: center;
-  border: 4px solid red;
+  /* border: 4px solid red; */
 }
 
   input {
