@@ -11,24 +11,15 @@ import CountUp from 'react-countup'
 import { stateOptions } from './AmericanStates'
 // import './NewHomePage.css'
 import '../pages/HomePage/homepage.css'
-
 import { activityOptions } from './ActivityOptions'
 // import AddressContext from 'src/components/Address_Field/AddressContext'
 // import AddressField from 'src/components/Address_Field/AddressField'
 // import AddressField from '../Address_Field/AddressField'
 import AddressField from '../components/Address_Field/AddressField';
 import '../components/Address_Field/AddressField.css';
-
 import woodsBackground from '../images/woods_background.jpg'; // Import the image
-
-//  ****** MAP ***********
 import SatelliteMap from '../components/Satelite_Map/Satelite_Map'
-
-//  ****** MAP ***********
-// import 'src/pages/HomePage/HomePage.css'
-
 import CalcPrice from '../components/F_CalcPrice/CalculatePriceFunction'
-// src/components/F_CalcPrice
 
 const HomePage = () => {
   // const [create] = useMutation(CREATE_GENERATE_PRICE)
@@ -43,18 +34,6 @@ const HomePage = () => {
     CalcThenDisplayPrice()
     setAddress(address)
   }
-  const containerStyle = {
-    backgroundImage: `url(${woodsBackground})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    height: '90vh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    border: '1px solid green',
-  };
-
-
 
   // *****NEW ADDRESS FILE *****
   const [address, setAddress] = React.useState('')
@@ -87,10 +66,9 @@ const HomePage = () => {
     console.log('acreage: ', acreage)
     console.log('duration: ', duration)
     console.log('Address: ', address)
+    console.log('button submitted')
 
-    const calculatedPrice = CalcPrice(americanState, acreage, duration).toFixed(
-      2
-    )
+    const calculatedPrice = CalcPrice(americanState, acreage, duration).toFixed(2)
     console.log('calculatedPrice: ', calculatedPrice)
     setFinalPrice(calculatedPrice)
 
@@ -100,20 +78,6 @@ const HomePage = () => {
       setMapData(mapData)
     }
     //  ****** MAP ***********
-  }
-
-  const incrementAcreage = () => {
-    const newValue = parseFloat(acreage) + 1
-    setAcreage(newValue.toString())
-    // onChange(newValue.toString())
-  }
-
-  const decrementAcreage = () => {
-    const newValue = parseFloat(acreage) - 1
-    if (newValue >= 0) { 
-      setAcreage(newValue.toString())
-      // onChange(newValue.toString())
-    }
   }
 
   return (
@@ -219,10 +183,11 @@ const HomePage = () => {
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem'}}>
             {/* <Button variant="primary" size="lg" color= 'green' onClick={handleClick} */}
 
-      <Button type="submit" size='lg' onClick={handleClick} 
+      <Button type="submit" 
+      size='lg' onClick={handleClick} 
       className = "submit-button"
-
       >
+      
         Generate Price
       </Button>              
             {/* type='submit' */}
@@ -250,7 +215,7 @@ const HomePage = () => {
     </div>
       <div className = "output-container">
         <div className="output-box">
-        <label>Final Price: $ <CountUp start={0} end={finalPrice} duration={0.33} />{' '}   </label>
+        <label>Final Price: $ <CountUp start={0} end={finalPrice} duration={0.33} />{' '}  </label>
       </div>
     </div>
   </div>
