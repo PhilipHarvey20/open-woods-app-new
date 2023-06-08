@@ -247,12 +247,10 @@ const HomePage = () => {
       </div>
          </div>
 
-        </div>
-      <div className = "output-price-land-breadkwon">
-      <div className=".form-output-container">
-        <div className="'display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: 100%">
-        <label className="mt-3 mb-3">Final Price: $ <CountUp start={0} end={finalPrice} duration={0.33} />{' '}   </label>
-        </div>
+    </div>
+      <div className = "output-container">
+        <div className="output-box">
+        <label>Final Price: $ <CountUp start={0} end={finalPrice} duration={0.33} />{' '}   </label>
       </div>
     </div>
   </div>
