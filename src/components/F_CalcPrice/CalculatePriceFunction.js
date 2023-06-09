@@ -5,7 +5,7 @@ import {
 //
 function CalcPrice(americanState, acreage, duration) {
   let totalAnnualPrice = 0
-  let finalPrice = 0
+  // let finalPrice = 0
 
   let statePriceUnderHundredAcres = StatePriceUnderHundredAcres[americanState]
   let statePriceOverHundredAcres = StatePriceOverHundredAcres[americanState]
