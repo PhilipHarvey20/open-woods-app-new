@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import '../pages/HomePage/homepage.css'
 import { activityOptions } from './ActivityOptions'
-import '../components/Address_Field/AddressField.css';
+import '../components/Address_Field/AddressField.css'
 import SatelliteMap from '../components/Satelite_Map/Satelite_Map'
 import CalcPrice from '../components/F_CalcPrice/CalculatePriceFunction'
 // import { onChange } from 'react-native'
@@ -23,6 +23,19 @@ const HomePage = () => {
   const [duration, setDuration] = useState(null)
   const [finalPrice, setFinalPrice] = useState(null)
   const [mapData, setMapData] = useState(null)
+
+
+  // const [activityOption, setActivityOption] = useState({
+  //   value: activityOptions[0],
+  // })
+  // const [americanState, setAmericanState] = useState({ value: stateOptions[0] })
+  // const [acreage, setAcreage] = useState(null)
+  // const [duration, setDuration] = useState(null)
+  // const [finalPrice, setFinalPrice] = useState(null)
+
+
+
+
 
   const handleClick = () => {
     CalcThenDisplayPrice()
@@ -47,7 +60,7 @@ const HomePage = () => {
     console.log('button submitted')
 
     // const calculatedPrice = CalcPrice('Iowa', 25, 1).toFixed(2)
-    const calculatedPrice = CalcPrice(americanState, acreage, duration).toFixed(2)
+    const calculatedPrice = CalcPrice(americanState.value, acreage, duration).toFixed(2)
     console.log('calculatedPrice: ', calculatedPrice)
     setFinalPrice(calculatedPrice)
 
@@ -181,7 +194,7 @@ const HomePage = () => {
          <div className="map mapboxgl-canvas">
          <SatelliteMap 
         id="map"
-        style="mapbox://styles/mapbox/satellite-v9"
+        // style="mapbox://styles/mapbox/satellite-v9"
         center={[-95.7129, 37.0902]}
          address={address} />
          <button class="mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon" title="Polygon tool (p)"></button>
