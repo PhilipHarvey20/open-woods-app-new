@@ -1,28 +1,22 @@
 import React, { useState } from 'react'
-import { Container } from 'react-bootstrap';
-
-// import { onChange } from 'react-native'
-
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
 import { Dropdown, DropdownButton, Button } from 'react-bootstrap'
 import { Form } from 'react-bootstrap'
 import CountUp from 'react-countup'
 import { stateOptions } from './AmericanStates'
-// import './NewHomePage.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 import '../pages/HomePage/homepage.css'
 import { activityOptions } from './ActivityOptions'
+import '../components/Address_Field/AddressField.css';
+import SatelliteMap from '../components/Satelite_Map/Satelite_Map'
+import CalcPrice from '../components/F_CalcPrice/CalculatePriceFunction'
+// import { onChange } from 'react-native'
 // import AddressContext from 'src/components/Address_Field/AddressContext'
 // import AddressField from 'src/components/Address_Field/AddressField'
 // import AddressField from '../Address_Field/AddressField'
-import AddressField from '../components/Address_Field/AddressField';
-import '../components/Address_Field/AddressField.css';
-import woodsBackground from '../images/woods_background.jpg'; // Import the image
-import SatelliteMap from '../components/Satelite_Map/Satelite_Map'
-import CalcPrice from '../components/F_CalcPrice/CalculatePriceFunction'
+// import AddressField from '../components/Address_Field/AddressField';
 
 const HomePage = () => {
-  // const [create] = useMutation(CREATE_GENERATE_PRICE)
   const [activityOption, setActivityOption] = useState(null)
   const [americanState, setAmericanState] = useState(null)
   const [acreage, setAcreage] = useState(null)
@@ -35,32 +29,16 @@ const HomePage = () => {
     setAddress(address)
   }
 
-  // *****NEW ADDRESS FILE *****
   const [address, setAddress] = React.useState('')
   function handleAddressChange(value) {
     setAddress(value)
   }
-  function handleFormSubmit(event) {
-    event.preventDefault()
-    console.log(`Address submitted: ${address}`)
-    // Do something with the address, such as call an API
-  }
-  // *****NEW ADDRESS FILE *****
 
-  const onSubmit = (e) => {
-    // prevent default submit
-    e.preventDefault()
-  }
-  //  ****** MAP ***********
-  // fetch the lng, lat from Mapbox API here
   const fetchMapData = async (address) => {
     return mapData
   }
-  //  ****** MAP ***********
 
   const CalcThenDisplayPrice = async () => {
-    // const calculatedPrice = CalcPrice('Iowa', 25, 1).toFixed(2)
-    // console log the parameters
     console.log('activityOption: ', activityOption)
     console.log('americanState: ', americanState)
     console.log('acreage: ', acreage)
@@ -68,16 +46,15 @@ const HomePage = () => {
     console.log('Address: ', address)
     console.log('button submitted')
 
+    // const calculatedPrice = CalcPrice('Iowa', 25, 1).toFixed(2)
     const calculatedPrice = CalcPrice(americanState, acreage, duration).toFixed(2)
     console.log('calculatedPrice: ', calculatedPrice)
     setFinalPrice(calculatedPrice)
 
-    //  ****** MAP ***********
     if (address) {
       const mapData = await fetchMapData(address)
       setMapData(mapData)
     }
-    //  ****** MAP ***********
   }
 
   return (
@@ -159,8 +136,7 @@ const HomePage = () => {
                   />
                 </Form.Group>
               </div>
-
-
+              
               <div>
                 <Form.Group
                   style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
