@@ -204,8 +204,13 @@ const HomePage = () => {
     </div>
       <div className = "output-container">
         <div className="output-box">
-        <label>Final Price: $ </label>
-         <CountUp start={0} end={finalPrice} duration={0.33} />{' '} 
+        <label>Final Price: </label>
+        {'$'}
+       <CountUp start={0} end= {finalPrice} duration={0.33} color={'green'}  
+
+       
+       
+        />
       </div>
     </div>
   </div>

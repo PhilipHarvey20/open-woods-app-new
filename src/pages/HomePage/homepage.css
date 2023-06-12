@@ -149,6 +149,10 @@ mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon
 
 .output-box {
   display: flex;
+  font-size: 1.5em;
+  font-family: 'Monteresat', sans-serif;
+  font-weight:  600; ;
+
   flex-direction: row;
   background-color: white;
   border-radius: 25px !important;
@@ -201,6 +205,7 @@ border-color: #5cc87dff;
     margin-right: 2em;
 
     .price-output {
+      
     }
 
     border-radius: 25px !important;
