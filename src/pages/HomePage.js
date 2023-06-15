@@ -79,7 +79,7 @@ const HomePage = () => {
             <div className="form-title">LAND LEASE PRICE CALCULATOR</div>
             <div className="form-inputs">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <label className="mt-3 mb-3">Choose an Activity:</label>
+                <label className="mt-3 mb-3">Choose an Activity</label>
                 <DropdownButton
                 className = "dropdown-button"
                   id="activity-dropdown"
@@ -101,7 +101,7 @@ const HomePage = () => {
                 </DropdownButton>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <label className="mt-3 mb-3">Choose a State:</label>
+                <label className="mt-3 mb-3">Choose a State</label>
                 <DropdownButton
                   className = "dropdown-button"
                   id="state-dropdown"
@@ -135,7 +135,7 @@ const HomePage = () => {
               <Form.Group 
               style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
               controlId="exampleForm.ControlInput2">
-                  <label className="mt-3 mb-3">Select Address:</label>
+                  <label className="mt-3 mb-3">Property Address (optional)</label>
 
               <Form.Control 
                    className="mt-3 mb-3"
@@ -152,7 +152,7 @@ const HomePage = () => {
                 <Form.Group
                   style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
                   controlId="exampleForm.ControlInput2">
-                  <label className="mt-3 mb-3">Select Duration:</label>
+                  <label className="mt-3 mb-3">Duration (days)</label>
                   <Form.Control
                   className="mt-3 mb-3"
                   style={{ flex: '0 0 40%' }}
@@ -171,7 +171,7 @@ const HomePage = () => {
                 <Form.Group
                   style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
                   controlId="exampleForm.ControlInput2">
-                  <label className="mt-3 mb-3">Select Acreage:</label>
+                  <label className="mt-3 mb-3">Select Acreage</label>
                   <Form.Control
                   className="mt-3 mb-3"
                   style={{ flex: '0 0 40%' }}
