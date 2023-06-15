@@ -29,14 +29,14 @@
   background-size: cover; */
   /* background-position: center; */
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   display: flex;
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 3rem;
   padding-bottom: 0;
   /* border: 1px solid green; */
-  height: 75vh;
+  height: 80vh;
   width: 50%;
   flex-direction: column;
 }
@@ -56,8 +56,9 @@
 }
 
 .form-title {
-  font-size: 200%;
-  padding: 2rem;
+  font-size: 190%;
+  padding: 1rem;
+  margin-top: 1rem;
   font-weight: 600; /* bold font weight */
     letter-spacing: 0px; /* increased letter spacing */
     line-height: 1; /* reduced line height */
@@ -82,13 +83,13 @@ padding-bottom: 4rem;    */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 3rem;
   /* padding-bottom: 5rem; */
-  height: 75vh;
+  height: 80vh;
   width: 50%;
 
   /* border: 4px solid green; */
@@ -143,7 +144,7 @@ mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon
   flex-direction: column;
   align-items: center;
   justify-content: top;
-  height: 25vh;
+  height: 20vh;
   width: 100vw;
 }
 

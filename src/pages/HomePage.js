@@ -142,8 +142,8 @@ const HomePage = () => {
                   style={{ flex: '0 0 40%' }}
                   size='lg'
                     width={1}
-                    placeholder="Enter duration"
-              type="email"  />
+                    placeholder="Enter address"
+              type="address"  />
               </Form.Group>
 
 
@@ -186,7 +186,7 @@ const HomePage = () => {
             </div>
        
 
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem'}}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '1rem'}}>
             {/* <Button variant="primary" size="lg" color= 'green' onClick={handleClick} */}
 
       <Button type="submit" 
