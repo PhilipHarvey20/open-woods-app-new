@@ -56,11 +56,12 @@
 }
 
 .form-title {
-  font-size: 190%;
+  font-size: 230%;
+  color: #343434ff;
   padding: 1.5rem;
   margin-top: 1rem;
   font-weight: 600; /* bold font weight */
-    letter-spacing: 0px; /* increased letter spacing */
+    letter-spacing: .2rem; /* increased letter spacing */
     line-height: 1; /* reduced line height */
     font-family: 'Monteresat', sans-serif; 
   }
@@ -153,7 +154,7 @@ mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon
   font-size: 1.5em;
   font-family: 'Monteresat', sans-serif;
   font-weight:  550; ;
-
+  color: #343434ff;
   flex-direction: row;
   background-color: white;
   border-radius: 25px !important;

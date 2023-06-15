@@ -76,7 +76,7 @@ const HomePage = () => {
       <div className="home-form-container">
         <div className="home-form">
           <Form>
-            <div className="form-title">LAND LEASE PRICE CALCULATOR</div>
+            <div className="form-title">LEASE CALCULATOR</div>
             <div className="form-inputs">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <label className="mt-3 mb-3">Choose an Activity</label>
