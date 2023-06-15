@@ -132,6 +132,23 @@ const HomePage = () => {
                 </DropdownButton>
               </div>
               <div>
+              <Form.Group 
+              style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+              controlId="exampleForm.ControlInput2">
+                  <label className="mt-3 mb-3">Select Address:</label>
+
+              <Form.Control 
+                   className="mt-3 mb-3"
+                  style={{ flex: '0 0 40%' }}
+                  size='lg'
+                    width={1}
+                    placeholder="Enter duration"
+              type="email"  />
+              </Form.Group>
+
+
+              </div>
+              <div>
                 <Form.Group
                   style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
                   controlId="exampleForm.ControlInput2">
@@ -206,11 +223,7 @@ const HomePage = () => {
         <div className="output-box">
         <label>Final Price: </label>
         {'$'}
-       <CountUp start={0} end= {finalPrice} duration={0.33} color={'green'}  
-
-       
-       
-        />
+       <CountUp start={0} end= {finalPrice} duration={0.33} color={'green'} />
       </div>
     </div>
   </div>
