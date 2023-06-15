@@ -171,7 +171,7 @@ const HomePage = () => {
                 <Form.Group
                   style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
                   controlId="exampleForm.ControlInput2">
-                  <label className="mt-3 mb-3">Select Acreage</label>
+                  <label className="mt-3 mb-3">Acreage</label>
                   <Form.Control
                   className="mt-3 mb-3"
                   style={{ flex: '0 0 40%' }}

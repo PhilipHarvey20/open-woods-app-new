@@ -69,7 +69,7 @@
   flex-direction: column;
   align-items: start; /* Change to left alignment */
   font-family: 'Monteresat', sans-serif; 
-  font-size: 130%; /* increased font size */
+  font-size: 140%; /* increased font size */
   font-weight: 500; /* bold font weight */
 padding-left: 3rem;
 padding-right: 3rem;
@@ -152,7 +152,7 @@ mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon
   display: flex;
   font-size: 1.5em;
   font-family: 'Monteresat', sans-serif;
-  font-weight:  600; ;
+  font-weight:  550; ;
 
   flex-direction: row;
   background-color: white;
