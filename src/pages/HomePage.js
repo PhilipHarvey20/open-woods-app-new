@@ -209,14 +209,12 @@ const HomePage = () => {
       </div>
       <div className="home-map-container">
          <div className="map mapboxgl-canvas">
-         <SatelliteMap 
-        id="map"
-        // style="mapbox://styles/mapbox/satellite-v9"
-        center={[-95.7129, 37.0902]}
-         address={address} />
-         <button class="mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon" title="Polygon tool (p)"></button>
+            <SatelliteMap 
+            id="map"
+            center={[-95.7129, 37.0902]}
+            address={address} />
+           </div>
       </div>
-         </div>
 
     </div>
       <div className = "output-container">
