@@ -208,7 +208,7 @@ const HomePage = () => {
 
       </div>
       <div className="home-map-container">
-         <div className="map mapboxgl-canvas">
+         <div className=".mapbox-canvas map">
             <SatelliteMap 
             id="map"
             center={[-95.7129, 37.0902]}
