@@ -1,6 +1,6 @@
 
 .home-container {
-  background-image: url('/Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/images/woods_background.jpg');
+  background-image: url('/Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/images/Florida_Woods.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -70,7 +70,7 @@
   flex-direction: column;
   align-items: start; /* Change to left alignment */
   font-family: 'Monteresat', sans-serif; 
-  font-size: 140%; /* increased font size */
+  font-size: 130%; /* increased font size */
   font-weight: 500; /* bold font weight */
 padding-left: 3rem;
 padding-right: 3rem;
