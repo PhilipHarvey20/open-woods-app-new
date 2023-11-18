@@ -3,7 +3,7 @@
 }
 
 .navbar {
-  background-color: #3e8ca4ff;
+  background-color: rgb(99, 128, 99);
   height: 10vh; /* Adjust the height of the navbar as needed */
   padding: 0; /* Remove padding inside the navbar */
   margin: 0; /* Remove margins from the navbar */

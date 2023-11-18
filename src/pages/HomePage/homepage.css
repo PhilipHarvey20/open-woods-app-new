@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
 
 .home-container {
-  background-image: url('/Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/images/Florida_Woods.JPG');
+  background-image: url('/Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/images/Bankhead_National_Forest_Topo_tav_v6jpg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -18,8 +20,24 @@
   background-size: cover;
   background-position: center; */
   /* border: 1px solid red; */
-  height: 75vh;
+  height: 85%;
   display: flex;
+  width: 100vw;
+}
+
+
+.output-container {
+  /* background-image: url('/Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/images/woods_background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: top;
+  height: 15%;
   width: 100vw;
 }
 
@@ -31,47 +49,70 @@
   align-items: center;
   justify-content: top;
   display: flex;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 3rem;
+  /* padding-left: 6rem;
+  padding-right: 6rem; */
+  /* padding-top: 3rem; */
   padding-bottom: 0;
   /* border: 1px solid green; */
   height: 80vh;
-  width: 50%;
+  width: 100%;
   flex-direction: column;
 }
 
 .home-form {
   display: flex;
-  background-color: white;
+  background-color: rgba(197, 227, 218, 0) !important; 
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   border-radius: 25px !important;
-  height: 85%;
-  width: 85%;
+  height: 60%;
+  width: 45%;
   /* border: 3px solid rgb(152, 151, 151); */
   border-radius: 5px;
   flex-direction: column;
 }
 
 .form-title {
-  font-size: 230%;
-  color: #343434ff;
-  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0); /* Adjust the alpha value as needed */
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1.7rem;
   margin-top: 1rem;
   font-weight: 600; /* bold font weight */
-    letter-spacing: .2rem; /* increased letter spacing */
+  letter-spacing: .09em ; /* Adjust the value as needed */
+  font-size: 2.7em;
+  color: rgb(54, 54, 54);
     line-height: 1; /* reduced line height */
-    font-family: 'Monteresat', sans-serif; 
+    font-family: 'Open Sans' !important;    
   }
+
+  .form-subtitle {
+    font-size: 230%;
+    background-color: rgba(255, 255, 255, 0); /* Adjust the alpha value as needed */
+    margin-top: 1rem;
+    font-weight: 450; /* bold font weight */
+    font-size: 1.2em;
+    color: rgb(0, 0, 0); 
+
+        letter-spacing: .1rem; /* increased letter spacing */
+      line-height: 1; /* reduced line height */
+      font-family: 'Open Sans' !important;    
+    }
+
+  
 
 .form-inputs {
   flex-direction: column;
   align-items: start; /* Change to left alignment */
-  font-family: 'Monteresat', sans-serif; 
-  font-size: 130%; /* increased font size */
-  font-weight: 500; /* bold font weight */
+  font-family: 'Open Sans' !important;    
+  font-size: 150%; /* increased font size */
+  color: rgb(54, 54, 54);
+
+  font-weight: 700; /* bold font weight */
+  padding-top: 10%;
+  padding-top: 10%;
+
 padding-left: 3rem;
 padding-right: 3rem;
 /* padding-top: 2rem;   
@@ -126,38 +167,31 @@ padding-bottom: 4rem;    */
 
 
 
-.output-container {
-  /* background-image: url('/Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/images/woods_background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
-  /* border: 1px solid red; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: top;
-  height: 20vh;
-  width: 100vw;
-}
 
-.output-box {
-  display: flex;
-  font-size: 1.5em;
-  font-family: 'Monteresat', sans-serif;
-  font-weight:  550; ;
-  color: #343434ff;
+
+
+  .output-box {
+    display: flex;
+    font-size: 2.3em;
+    font-family: 'Open Sans' !important;    
+    font-weight: 800;
+    background-color: rgba(197, 227, 218, 0) !important; /* Grey background with 50% transparency */
+    color: rgb(255, 255, 255);
+    /* color: rgba(254, 254, 254, 0.725); */
+
   flex-direction: row;
-  background-color: white;
   border-radius: 25px !important;
   height: 60%;
   margin: 0;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  width: 20%;
+  /* padding-left: 3rem;
+  padding-right: 3rem; */
+  width: 30%;
   justify-content: space-between;
   align-items: center;
   /* border: 4px solid red; */
 }
+
+
 
   input {
   height: 1rem;
