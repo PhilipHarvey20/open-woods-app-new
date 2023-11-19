@@ -5,6 +5,8 @@ import CountUp from "react-countup";
 import { stateOptions } from "./AmericanStates";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import activity_icons_in_a_row from "../images/activity_icons_in_a_row.png";
+// public/images/activity_icons_in_a_row.jpg
 import "../pages/HomePage/homepage.css";
 import { activityOptions } from "./ActivityOptions";
 import "../components/Address_Field/AddressField.css";
@@ -74,14 +76,9 @@ const HomePage = () => {
       <div className="home-input-container">
         <div className="home-form-container">
           <div className="form-title">Outdoor Property Lease Calculator</div>
-          <img
-            // /Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/pages/HomePage.js
-
-            // src="/../images/activity_icons_in_a_row.png"
-            src="public/images/activity_icons_in_a_row.png"
-            alt="Outdoor Recreation"
-            className="activity_icons"
-          />
+          <div className="activity_icons">
+            <img src={activity_icons_in_a_row} alt="activity icons" />
+          </div>
           <div className="form-subtitle">
             {" "}
             A lease price calculator for outdoor recreational land{" "}
