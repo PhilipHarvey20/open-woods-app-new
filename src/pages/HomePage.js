@@ -74,6 +74,14 @@ const HomePage = () => {
       <div className="home-input-container">
         <div className="home-form-container">
           <div className="form-title">Outdoor Property Lease Calculator</div>
+          <img
+            // /Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/pages/HomePage.js
+
+            // src="/../images/activity_icons_in_a_row.png"
+            src="public/images/activity_icons_in_a_row.png"
+            alt="Outdoor Recreation"
+            className="activity_icons"
+          />
           <div className="form-subtitle">
             {" "}
             A lease price calculator for outdoor recreational land{" "}
