@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower:wght@300;400;500&display=swap');
 
 .home-container {
   background-image: url('/Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/images/Bankhead_National_Forest_Topo_tav_v6jpg.jpg');
@@ -64,6 +64,7 @@
   background-color: rgba(197, 227, 218, 0) !important; 
   flex-direction: column;
   justify-content: center;
+  padding-top: 2.5em;
   border-radius: 25px !important;
   height: 60%;
   width: 45%;
@@ -77,10 +78,10 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0); /* Adjust the alpha value as needed */
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-bottom: 1.7rem;
+  /* padding-bottom: 1.7rem; */
   margin-top: 1rem;
   font-weight: 600; /* bold font weight */
   letter-spacing: .09em ; /* Adjust the value as needed */
@@ -94,10 +95,12 @@
   .activity_icons{
     color: rgb(54, 54, 54,100);
     display: flex;
+
     justify-content: center;
     align-items: center;
+    padding: 1.2em;
 width: 10%!important;
-height: 20%!important;
+/* height: 30%!important; */
   }
 
   .form-subtitle {
@@ -105,15 +108,15 @@ height: 20%!important;
     justify-content: center;
     align-items: center;
     font-size: 230%;
-    background-color: rgba(255, 255, 255, 0); /* Adjust the alpha value as needed */
+    background-color: rgba(120, 120, 120, 0); /* Adjust the alpha value as needed */
     margin-top: 1rem;
-    font-weight: 450; /* bold font weight */
-    font-size: 1.2em;
-    color: rgb(0, 0, 0); 
+    font-weight: 650; /* bold font weight */
+    font-size: 1.3em;
+    color: rgb(37, 37, 37); 
 
         letter-spacing: .1rem; /* increased letter spacing */
       line-height: 1; /* reduced line height */
-      font-family: 'Open Sans' !important;    
+      font-family: 'Indie Flower' !important;    
     }
 
   
@@ -122,18 +125,33 @@ height: 20%!important;
   flex-direction: column;
   align-items: start; /* Change to left alignment */
   font-family: 'Open Sans' !important;    
+  border-style: dashed;
+  border-color: rgb(77, 77, 77, 70%);
+  border-radius: 5%;
+  border-width: .15cm;
+
   font-size: 150%; /* increased font size */
   color: rgb(54, 54, 54);
 
   font-weight: 700; /* bold font weight */
-  padding-top: 10%;
-  padding-top: 10%;
+  /* padding-top: 10%;
+  padding-top: 10%; */
 
 padding-left: 3rem;
 padding-right: 3rem;
 /* padding-top: 2rem;   
 padding-bottom: 4rem;    */
 }
+
+.form-buttons {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
 
 .home-map-container {
   display: flex;

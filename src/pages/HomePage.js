@@ -5,7 +5,7 @@ import CountUp from "react-countup";
 import { stateOptions } from "./AmericanStates";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-import activity_icons_in_a_row from "../images/activity_icons_in_a_row.png";
+import activity_icons_in_a_row from "../images/activity_icons_in_a_row_no_text.png";
 // public/images/activity_icons_in_a_row.jpg
 import "../pages/HomePage/homepage.css";
 import { activityOptions } from "./ActivityOptions";
@@ -71,17 +71,30 @@ const HomePage = () => {
     }
   };
 
+  const handleReset = () => {
+    // Reset or clear the state values
+    setActivityOption(null);
+    setAmericanState(null);
+    setAcreage("");
+    setDuration("");
+    setFinalPrice(null);
+  };
+
   return (
     <div className="home-container">
       <div className="home-input-container">
         <div className="home-form-container">
           <div className="form-title">Outdoor Property Lease Calculator</div>
-          <div className="activity_icons">
-            <img src={activity_icons_in_a_row} alt="activity icons" />
-          </div>
           <div className="form-subtitle">
             {" "}
             A lease price calculator for outdoor recreational land{" "}
+          </div>
+          <div className="activity_icons">
+            <img
+              src={activity_icons_in_a_row}
+              alt="activity icons"
+              style={{ height: "50px", width: "700px" }}
+            />
           </div>
 
           <div className="home-form">
@@ -93,7 +106,7 @@ const HomePage = () => {
                     justifyContent: "space-between",
                     alignItems: "center",
                   }}>
-                  <label className="mt-3 mb-3">Choose an Activity</label>
+                  <label className="mt-3 mb-3">Activity</label>
                   <DropdownButton
                     className="dropdown-button"
                     id="activity-dropdown"
@@ -118,7 +131,7 @@ const HomePage = () => {
                     justifyContent: "space-between",
                     alignItems: "center",
                   }}>
-                  <label className="mt-3 mb-3">Choose a State</label>
+                  <label className="mt-3 mb-3">State</label>
                   <DropdownButton
                     className="dropdown-button"
                     id="state-dropdown"
@@ -152,7 +165,7 @@ const HomePage = () => {
                       alignItems: "center",
                     }}
                     controlId="exampleForm.ControlInput2">
-                    <label className="mt-3 mb-3">Duration (days)</label>
+                    <label className="mt-3 mb-3">Days in Lease</label>
                     <Form.Control
                       className="mt-3 mb-3"
                       style={{ flex: "0 0 40%" }}
@@ -188,28 +201,35 @@ const HomePage = () => {
                 </div>
               </div>
 
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  padding: "1rem",
-                }}>
-                {/* <Button variant="primary" size="lg" color= 'green' onClick={handleClick} */}
+              <div className="form-buttons">
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  onClick={handleReset}
+                  className="reset-button">
+                  Reset
+                </Button>
 
                 <Button
                   type="submit"
                   size="lg"
                   onClick={handleClick}
-                  className="submit-button">
-                  Generate Price
+                  className="submit-button"
+                  style={{
+                    backgroundColor: "rgb(99, 128, 99)",
+                    borderColor: "rgb(99, 128, 99)",
+
+                    color: "white",
+                  }}>
+                  Calculate Price
                 </Button>
-                {/* type='submit' */}
-                {/* className='submit-button'  */}
-                {/* size = 'lg' */}
-                {/* color='submit'           
-                Submit> */}
               </div>
+
+              {/* type='submit' */}
+              {/* className='submit-button'  */}
+              {/* size = 'lg' */}
+              {/* color='submit'           
+                Submit> */}
             </Form>
           </div>
         </div>
