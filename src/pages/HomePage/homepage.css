@@ -25,20 +25,63 @@
   width: 100vw;
 }
 
-
 .output-container {
-  /* background-image: url('/Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/images/woods_background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
-  /* border: 1px solid red; */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: top;
-  height: 15%;
+  margin-bottom: 1em;
+  justify-content: end !important;
+  height: 100%;
   width: 100vw;
 }
+
+.output-box {
+  /* position: absolute; */
+  display: flex;
+  width: 30%;
+  flex-direction: row; /* Adjusted to column layout */
+  justify-content: space-between;
+  align-items: center; /* Centered horizontally */
+  font-size: 2em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+}
+
+.final_price {
+
+  position: absolute;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  color: green; 
+}
+
+/* Additional style for the arrowhead image */
+.arrowhead-img {
+  height: 65px;
+  width: 160px;
+}
+
+
+/* flex-direction: row; */
+/* border-radius: 25px !important;
+height: 60%;
+margin: 0; */
+/* padding-left: 3rem;
+padding-right: 3rem; */
+/* width: 30%; */
+/* justify-content: space-between; */
+/* align-items: center; */
+/* border: 4px solid red; */
+/* } */
+
+
+
+
 
 .home-form-container {
   /* background-image: url('/Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/images/woods_background.jpg');
@@ -203,27 +246,6 @@ padding-bottom: 4rem;    */
 
 
 
-  .output-box {
-    display: flex;
-    font-size: 2.3em;
-    font-family: 'Open Sans' !important;    
-    font-weight: 800;
-    background-color: rgba(197, 227, 218, 0) !important; /* Grey background with 50% transparency */
-    color: rgb(255, 255, 255);
-    /* color: rgba(254, 254, 254, 0.725); */
-
-  flex-direction: row;
-  border-radius: 25px !important;
-  height: 60%;
-  margin: 0;
-  /* padding-left: 3rem;
-  padding-right: 3rem; */
-  width: 30%;
-  justify-content: space-between;
-  align-items: center;
-  /* border: 4px solid red; */
-}
-
 
 
   input {
@@ -248,33 +270,6 @@ border-color: #5cc87dff;
   box-shadow: none;
   border-color:  #a0ab8aff; /* Set the custom outline color */
 }
-
-
-
-.form-output-container {
-  flex-direction: row;
-  width:100%;
-  justify-content: 'space-between';
-  align-items: center;
-    background-color: white;
-    display: flex;
-    padding: 0;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    margin-left: 2em;
-    margin-right: 2em;
-
-    .price-output {
-      
-    }
-
-    border-radius: 25px !important;
-    width: 40% !important;
-    /* border: 3px solid rgb(152, 151, 151); */
-    height: 10%;
-    width: 100%;
-    display: flex;
-  }
 
 
 .total-price-input {

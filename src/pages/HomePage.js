@@ -6,6 +6,7 @@ import { stateOptions } from "./AmericanStates";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import activity_icons_in_a_row from "../images/activity_icons_in_a_row_no_text.png";
+import arrowhead_img from "../images/arrowhead_v2.png";
 // public/images/activity_icons_in_a_row.jpg
 import "../pages/HomePage/homepage.css";
 import { activityOptions } from "./ActivityOptions";
@@ -245,131 +246,20 @@ const HomePage = () => {
       <div className="output-container">
         <div className="output-box">
           <label>Final Price: </label>
-          {"$"}
-          <CountUp start={0} end={finalPrice} duration={0.33} color={"green"} />
+          <div>
+            <img
+              className="arrowhead-img"
+              src={arrowhead_img}
+              alt="arrowhead img"
+            />
+            <div className="final_price">
+              {"$"}
+              <CountUp start={0} end={finalPrice} duration={0.33} />
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    //     <>
-    //       {/* <MetaTags title="Home" description="Home page" /> */}
-    //       <>
-    //         <Form onSubmit={onSubmit}>
-    //           <div className="col-md-6 d-flex ">
-    //             <div className="w-50">
-    //               <div className="form-group pl-2 pr-1 dropdown-container">
-    //                 <label
-    //                   htmlFor="activity"
-    //                   className=".form-group label {
-    // "
-    //                 >
-    //                   Choose an activity
-    //                 </label>
-    //                 <div className="dropdown-button">
-    //                   <DropdownButton
-    //                     id="activity-dropdown"
-    //                     title={
-    //                       activityOption ? activityOption.label : 'Make a selection'
-    //                     }
-    //                     menuVariant="dark"
-    //                     size="lg"
-    //                   >
-    //                     {activityOptions.map((option) => (
-    //                       <Dropdown.Item
-    //                         key={option.value}
-    //                         onClick={() => setActivityOption(option)}
-    //                       >
-    //                         {option.label}
-    //                       </Dropdown.Item>
-    //                     ))}
-    //                   </DropdownButton>
-    //                 </div>
-    //               </div>
-
-    //               <div className="form-group pl-2 pr-1 dropdown-container">
-    //                 <label htmlFor="state" className="mr-2">
-    //                   Choose a state
-    //                 </label>
-    //                 <div className="dropdown-button">
-    //                   <DropdownButton
-    //                     id="state-dropdown"
-    //                     title={
-    //                       americanState ? americanState.label : 'Make a selection'
-    //                     }
-    //                     size="lg"
-    //                   >
-    //                     <Dropdown.Menu
-    //                       style={{ maxHeight: '200px', overflowY: 'scroll' }}
-    //                     >
-    //                       {stateOptions.map((option) => (
-    //                         <Dropdown.Item
-    //                           key={option.value}
-    //                           onClick={() => setAmericanState(option)}
-    //                           className={
-    //                             americanState &&
-    //                             americanState.value === option.value
-    //                               ? 'selected-item'
-    //                               : ''
-    //                           }
-    //                         >
-    //                           {option.label}
-    //                         </Dropdown.Item>
-    //                       ))}
-    //                     </Dropdown.Menu>
-    //                   </DropdownButton>
-    //                 </div>
-    //               </div>
-    //             </div>
-    //           </div>
-    //           <div className="button-container">
-    //             <button className="decrement-button" onClick={decrementAcreage}>
-    //               <BsDash />
-    //             </button>
-    //             <input
-    //               className="input-field"
-    //               type="number"
-    //               id="acreage"
-    //               name="acreage"
-    //               min="0"
-    //               value={acreage}
-    //               onChange={(e) => {
-    //                 setAcreage(e.target.value)
-    //                 // onChange(e.target.value)
-    //               }}
-    //             />
-    //             <button className="increment-button" onClick={incrementAcreage}>
-    //               <BsPlus />
-    //             </button>
-    //           </div>
-
-    //           {/* <div className="form-group col-4 pl-2 pr-1">
-    //             <label htmlFor="duration">Duration</label>
-    //             <NumberField
-    //               className="form-control"
-    //               name="duration"
-    //               validation={{ required: true, pattern: { value: /^[1-9]\d*$/ } }}
-    //               onChange={(e) => setDuration(e.target.value)}
-    //             />
-    //           </div> */}
-    //           <div className="form-group col-4 pl-2 pr-1">
-    //             <label htmlFor="address">Address</label>
-    //             <AddressField setAddress={setAddress} />
-    //           </div>
-    //           {/* cut here */}
-
-    //           <div>
-    //             <p className="final-price">
-    //               $ <CountUp start={0} end={finalPrice} duration={0.33} />{' '}
-    //             </p>
-    //             <button onClick={handleClick}>Submit</button>
-    //             <></>
-    //           </div>
-    //           <div className="map-container">
-    //             <SatelliteMap address={address} />
-    //           </div>
-    //         </Form>
-    //       </>
-    //     </>
   );
 };
 
