@@ -6,7 +6,7 @@ import { stateOptions } from "./AmericanStates";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import activity_icons_in_a_row from "../images/activity_icons_in_a_row_no_text.png";
-import arrowhead_img from "../images/arrowhead_v2.png";
+import arrowhead_img from "../images/arrowhead_v3.png";
 // public/images/activity_icons_in_a_row.jpg
 import "../pages/HomePage/homepage.css";
 import { activityOptions } from "./ActivityOptions";
@@ -37,7 +37,7 @@ const HomePage = () => {
 
   const handleClick = () => {
     CalcThenDisplayPrice();
-    setAddress(address);
+    // setAddress(address);
   };
 
   const [address, setAddress] = React.useState("");
@@ -94,7 +94,8 @@ const HomePage = () => {
             <img
               src={activity_icons_in_a_row}
               alt="activity icons"
-              style={{ height: "50px", width: "700px" }}
+              // style={{ height: "50px", width: "700px" }}
+              style={{ width: "500px", height: "auto" }} // Adjust as needed
             />
           </div>
 
@@ -166,13 +167,20 @@ const HomePage = () => {
                       alignItems: "center",
                     }}
                     controlId="exampleForm.ControlInput2">
-                    <label className="mt-3 mb-3">Days in Lease</label>
+                    <label className="mt-3 mb-3" input-focus>
+                      Days in Lease
+                    </label>
                     <Form.Control
-                      className="mt-3 mb-3"
-                      style={{ flex: "0 0 40%" }}
+                      className="mt-3 mb-3 input-focus"
+                      style={{
+                        flex: "0 0 40%",
+                        backgroundColor: "transparent",
+                        borderColor: "transparent",
+                      }}
                       type="number"
                       size="lg"
-                      width={1}
+                      backgroundColor="transparent"
+                      // width=
                       placeholder="Enter duration"
                       value={duration}
                       onChange={(e) => setDuration(e.target.value)}
@@ -191,7 +199,11 @@ const HomePage = () => {
                     <label className="mt-3 mb-3">Acreage</label>
                     <Form.Control
                       className="mt-3 mb-3"
-                      style={{ flex: "0 0 40%" }}
+                      style={{
+                        flex: "0 0 40%",
+                        backgroundColor: "transparent",
+                        borderColor: "transparent",
+                      }}
                       type="number"
                       size="lg"
                       placeholder="Enter acreage"
@@ -222,7 +234,7 @@ const HomePage = () => {
 
                     color: "white",
                   }}>
-                  Calculate Price
+                  Calculate Lease Price
                 </Button>
               </div>
 
@@ -245,14 +257,22 @@ const HomePage = () => {
       </div>
       <div className="output-container">
         <div className="output-box">
-          <label>Final Price: </label>
-          <div>
+          <div style={{ position: "relative" }}>
             <img
               className="arrowhead-img"
               src={arrowhead_img}
               alt="arrowhead img"
+              style={{ width: "45%", height: "auto" }} // Adjust as needed
             />
-            <div className="final_price">
+            <div
+              className="final_price"
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                color: "white", // Change the color so the text is visible on the image
+              }}>
               {"$"}
               <CountUp start={0} end={finalPrice} duration={0.33} />
             </div>

@@ -41,7 +41,7 @@
   display: flex;
   width: 30%;
   flex-direction: row; /* Adjusted to column layout */
-  justify-content: space-between;
+  justify-content: center;
   align-items: center; /* Centered horizontally */
   font-size: 2em;
   font-family: 'Open Sans', sans-serif;
@@ -107,9 +107,10 @@ padding-right: 3rem; */
   flex-direction: column;
   justify-content: center;
   padding-top: 2.5em;
+  padding-bottom: 1.5em;
   border-radius: 25px !important;
   height: 60%;
-  width: 45%;
+  width: 40%;
   /* border: 3px solid rgb(152, 151, 151); */
   border-radius: 5px;
   flex-direction: column;
@@ -140,7 +141,7 @@ padding-right: 3rem; */
 
     justify-content: center;
     align-items: center;
-    padding: 1.2em;
+    padding: 1em;
 width: 10%!important;
 /* height: 30%!important; */
   }
@@ -166,13 +167,15 @@ width: 10%!important;
 .form-inputs {
   flex-direction: column;
   align-items: start; /* Change to left alignment */
-  font-family: 'Open Sans' !important;    
+  font-family: 'Open Sans' !important;   
+  border-right-color: red;
+ 
   border-style: dashed;
   border-color: rgb(77, 77, 77, 70%);
   border-radius: 5%;
   border-width: .15cm;
 
-  font-size: 150%; /* increased font size */
+  font-size: 140%; /* increased font size */
   color: rgb(54, 54, 54);
 
   font-weight: 700; /* bold font weight */
@@ -186,13 +189,16 @@ padding-bottom: 4rem;    */
 }
 
 .form-buttons {
-  padding: 1em;
+  padding: .7em;
   display: flex;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
   justify-content: space-between;
   align-items: center;
   padding-left: 8rem;
   padding-right: 8rem;
 }
+
 
 
 .home-map-container {
@@ -257,6 +263,8 @@ padding-bottom: 4rem;    */
 .submit-button {
   display: flex;
   color: white;
+  font-family: 'Open Sans', sans-serif;
+
   background-color:  #5cc87dff;
 border-color: #5cc87dff;
   flex-direction: row;
@@ -268,6 +276,8 @@ border-color: #5cc87dff;
 .submit-button .submit-toggle:focus .submit-button:hover {
   background-color: #a0ab8aff;
   box-shadow: none;
+  font-family: 'Open Sans', sans-serif;
+
   border-color:  #a0ab8aff; /* Set the custom outline color */
 }
 
