@@ -145,14 +145,17 @@ const HomePage = () => {
                       style={{ maxHeight: "200px", overflowY: "scroll" }}>
                       {stateOptions.map((option) => (
                         <Dropdown.Item
+                          // key={option.value}
+                          // onClick={() => setAmericanState(option)}
+                          // className={
+                          //   americanState &&
+                          //   americanState.value === option.value
+                          //     ? "selected-item"
+                          //     : ""
+                          // }>
+                          // {option.label}
                           key={option.value}
-                          onClick={() => setAmericanState(option)}
-                          className={
-                            americanState &&
-                            americanState.value === option.value
-                              ? "selected-item"
-                              : ""
-                          }>
+                          onClick={() => setAmericanState(option)}>
                           {option.label}
                         </Dropdown.Item>
                       ))}
@@ -281,7 +284,7 @@ const HomePage = () => {
                 transform: "translate(-50%, -50%)",
                 color: "white", // Change the color so the text is visible on the image
               }}>
-              {"$"}
+              {"$ "}
               <CountUp start={0} end={finalPrice} duration={0.33} />
             </div>
           </div>

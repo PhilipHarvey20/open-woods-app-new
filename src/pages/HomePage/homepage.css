@@ -407,6 +407,7 @@ img {
 .dropdown-menu .dropdown-item:focus {
   background-color: #778184ff;
   color: white;
+  
 }
 /* Activity and State */
   .form-group label {
