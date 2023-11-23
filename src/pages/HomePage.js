@@ -176,12 +176,15 @@ const HomePage = () => {
                         flex: "0 0 40%",
                         backgroundColor: "transparent",
                         borderColor: "transparent",
+                        fontSize: "1.2em",
+                        fontWeight: "550",
+                        textAlign: "center",
                       }}
                       type="number"
                       size="lg"
                       backgroundColor="transparent"
                       // width=
-                      placeholder="Enter duration"
+                      placeholder="Enter Here"
                       value={duration}
                       onChange={(e) => setDuration(e.target.value)}
                     />
@@ -193,7 +196,7 @@ const HomePage = () => {
                     style={{
                       display: "flex",
                       justifyContent: "space-between",
-                      alignItems: "center",
+                      // alignItems: "center",
                     }}
                     controlId="exampleForm.ControlInput2">
                     <label className="mt-3 mb-3">Acreage</label>
@@ -201,12 +204,17 @@ const HomePage = () => {
                       className="mt-3 mb-3"
                       style={{
                         flex: "0 0 40%",
+                        width: "1em",
+                        fontFamily: "Open Sans",
+                        fontSize: "1.2em",
+                        fontWeight: "550",
                         backgroundColor: "transparent",
                         borderColor: "transparent",
+                        textAlign: "center",
                       }}
                       type="number"
                       size="lg"
-                      placeholder="Enter acreage"
+                      placeholder="Enter Here"
                       value={acreage}
                       onChange={(e) => setAcreage(e.target.value)}
                     />

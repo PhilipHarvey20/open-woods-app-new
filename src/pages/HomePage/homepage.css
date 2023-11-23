@@ -168,7 +168,6 @@ width: 10%!important;
   flex-direction: column;
   align-items: start; /* Change to left alignment */
   font-family: 'Open Sans' !important;   
-  border-right-color: red;
  
   border-style: dashed;
   border-color: rgb(77, 77, 77, 70%);
@@ -192,7 +191,7 @@ padding-bottom: 4rem;    */
   padding: .7em;
   display: flex;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
+  font-weight: 600; /* Adjust this value as needed */
   justify-content: space-between;
   align-items: center;
   padding-left: 8rem;
@@ -259,8 +258,16 @@ padding-bottom: 4rem;    */
   margin-bottom: 1rem;
 }
 
+.reset-button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600; /* Adjust this value as needed */
+}
+
+
 
 .submit-button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600; /* Adjust this value as needed */
   display: flex;
   color: white;
   font-family: 'Open Sans', sans-serif;
@@ -274,6 +281,8 @@ border-color: #5cc87dff;
 }
 
 .submit-button .submit-toggle:focus .submit-button:hover {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500; /* Adjust this value as needed */
   background-color: #a0ab8aff;
   box-shadow: none;
   font-family: 'Open Sans', sans-serif;
@@ -359,6 +368,9 @@ img {
 /* Activity and State */
 .dropdown-button .dropdown-toggle {
   background-color: #fe7159ff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600; /* Adjust this value as needed */
+
   height: 40px;
   outline: none;
   box-shadow: none;
