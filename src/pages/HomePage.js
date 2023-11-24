@@ -141,25 +141,16 @@ const HomePage = () => {
                       americanState ? americanState.label : "Make a selection"
                     }
                     size="lg">
-                    <Dropdown.Menu
-                      style={{ maxHeight: "200px", overflowY: "scroll" }}>
-                      {stateOptions.map((option) => (
-                        <Dropdown.Item
-                          // key={option.value}
-                          // onClick={() => setAmericanState(option)}
-                          // className={
-                          //   americanState &&
-                          //   americanState.value === option.value
-                          //     ? "selected-item"
-                          //     : ""
-                          // }>
-                          // {option.label}
-                          key={option.value}
-                          onClick={() => setAmericanState(option)}>
-                          {option.label}
-                        </Dropdown.Item>
-                      ))}
-                    </Dropdown.Menu>
+                    {/* <Dropdown.Menu> */}
+                    {/* // style={{ Height: "200px", overflowY: "scroll" }} */}
+                    {stateOptions.map((option) => (
+                      <Dropdown.Item
+                        key={option.value}
+                        onClick={() => setAmericanState(option)}>
+                        {option.label}
+                      </Dropdown.Item>
+                    ))}
+                    {/* </Dropdown.Menu> */}
                   </DropdownButton>
                 </div>
                 <div>
@@ -179,8 +170,8 @@ const HomePage = () => {
                         flex: "0 0 40%",
                         backgroundColor: "transparent",
                         borderColor: "transparent",
-                        fontSize: "1.2em",
-                        fontWeight: "550",
+                        fontSize: "1.1em",
+                        fontWeight: "600",
                         textAlign: "center",
                       }}
                       type="number"
@@ -209,8 +200,8 @@ const HomePage = () => {
                         flex: "0 0 40%",
                         width: "1em",
                         fontFamily: "Open Sans",
-                        fontSize: "1.2em",
-                        fontWeight: "550",
+                        fontSize: "1.1em",
+                        fontWeight: "600",
                         backgroundColor: "transparent",
                         borderColor: "transparent",
                         textAlign: "center",
@@ -273,7 +264,7 @@ const HomePage = () => {
               className="arrowhead-img"
               src={arrowhead_img}
               alt="arrowhead img"
-              style={{ width: "45%", height: "auto" }} // Adjust as needed
+              style={{ width: "43%", height: "auto" }} // Adjust as needed
             />
             <div
               className="final_price"

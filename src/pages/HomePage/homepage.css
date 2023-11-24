@@ -43,7 +43,7 @@
   flex-direction: row; /* Adjusted to column layout */
   justify-content: center;
   align-items: center; /* Centered horizontally */
-  font-size: 2em;
+  font-size: 1.6em;
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   color: rgb(255, 255, 255);
@@ -363,6 +363,15 @@ img {
 /* Activity and State */
 .dropdown-button {
   color:#fe7159ff;
+  max-height: 200px !important;
+  overflow-y: scroll !important;
+  
+}
+
+.dropdown-menu.show {
+  display: block;
+  max-height: 300px;
+  overflow-y: scroll;
 }
 
 /* Activity and State */
@@ -391,6 +400,8 @@ img {
   background-color: #af4f3dff;
   box-shadow: none;
   border-color:  #af4f3dff;/* Set the custom outline color */
+  max-height: 2000px;
+  overflow-y: scroll;
 }
 /* Activity and State */
 .selected-item {
@@ -398,17 +409,18 @@ img {
   color: white;
 }
 /* Activity and State */
-.dropdown-menu .dropdown-item:hover {
-  background-color: #778184ff;
-  color: white;
-}
-/* Activity and State */
+.dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:active,
 .dropdown-menu .dropdown-item:focus {
   background-color: #778184ff;
   color: white;
-  
 }
+
+
+
+.dropdown-button .dropdown-menu-scroll {
+
+} 
 /* Activity and State */
   .form-group label {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
