@@ -5,8 +5,6 @@ import CountUp from "react-countup";
 import { stateOptions } from "./AmericanStates";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-import activity_icons_in_a_row from "../images/activity_icons_in_a_row_no_text.png";
-import arrowhead_img from "../images/arrowhead_v3.png";
 // public/images/activity_icons_in_a_row.jpg
 import "../pages/HomePage/homepage.css";
 import { activityOptions } from "./ActivityOptions";
@@ -92,7 +90,10 @@ const HomePage = () => {
           </div>
           <div className="activity_icons">
             <img
-              src={activity_icons_in_a_row}
+              src={
+                process.env.PUBLIC_URL +
+                "/images/activity_icons_in_a_row_no_text.png"
+              }
               alt="activity icons"
               // style={{ height: "50px", width: "700px" }}
               style={{ width: "500px", height: "auto" }} // Adjust as needed
@@ -262,7 +263,7 @@ const HomePage = () => {
           <div style={{ position: "relative" }}>
             <img
               className="arrowhead-img"
-              src={arrowhead_img}
+              src={process.env.PUBLIC_URL + "/images/arrowhead_v3.png"}
               alt="arrowhead img"
               style={{ width: "43%", height: "auto" }} // Adjust as needed
             />

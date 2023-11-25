@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower:wght@300;400;500&display=swap');
 
 .home-container {
-  background-image: url('/Users/macintoshhd/Documents/Open Woods/open-woods-app-new/src/images/Bankhead_National_Forest_Topo_tav_v6jpg.jpg');
+  background-image: url('../../../public/images/Bankhead_National_Forest_Topo_tav_v6jpg.jpg');
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -247,12 +248,6 @@ padding-bottom: 4rem;    */
 }
 
 
-
-
-
-
-
-
   input {
   height: 1rem;
   margin-bottom: 1rem;
@@ -305,17 +300,6 @@ border-color: #5cc87dff;
 }
 
 
-
-/* 
-<button class="mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon" title="Polygon tool (p)"></button>
-<div class="mapboxgl-ctrl-bottom-left"><div class="mapboxgl-ctrl" style="display: block;"><a class="mapboxgl-ctrl-logo" target="_blank" rel="noopener nofollow" href="https://www.mapbox.com/" aria-label="Mapbox logo"></a></div></div>
-<div class="mapboxgl-ctrl-bottom-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-attrib mapboxgl-compact mapboxgl-compact-show"><button class="mapboxgl-ctrl-attrib-button" type="button" aria-label="Toggle attribution" aria-expanded="true"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Toggle attribution"></span></button><div class="mapboxgl-ctrl-attrib-inner" role="list"><a href="https://www.mapbox.com/about/maps/" target="_blank" title="Mapbox" aria-label="Mapbox" role="listitem">© Mapbox</a> <a href="https://www.openstreetmap.org/about/" target="_blank" title="OpenStreetMap" aria-label="OpenStreetMap" role="listitem">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://apps.mapbox.com/feedback/?owner=mapbox&amp;id=satellite-v9&amp;access_token=pk.eyJ1Ijoib3Blbndvb2RzIiwiYSI6ImNsZjNjaXg2MzBtNDgzb28xN2N6ZDNiM3IifQ.IyWyuTKi7EivffZkjFRpXQ#/-86.85288/33.329108/16" target="_blank" aria-label="Map feedback" role="listitem" rel="noopener nofollow">Improve this map</a> <a href="https://www.maxar.com/" target="_blank" title="Maxar" aria-label="Maxar" role="listitem">© Maxar</a></div></div></div>
-/* <button class="mapboxgl-ctrl-attrib-button" type="button" aria-label="Toggle attribution" aria-expanded="true"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Toggle attribution"></span></button> */
-/* <button class="mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_trash" title="Delete"></button>
-<div class="mapboxgl-ctrl mapboxgl-ctrl-attrib mapboxgl-compact mapboxgl-compact-show"><button class="mapboxgl-ctrl-attrib-button" type="button" aria-label="Toggle attribution" aria-expanded="true"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Toggle attribution"></span></button><div class="mapboxgl-ctrl-attrib-inner" role="list"><a href="https://www.mapbox.com/about/maps/" target="_blank" title="Mapbox" aria-label="Mapbox" role="listitem">© Mapbox</a> <a href="https://www.openstreetmap.org/about/" target="_blank" title="OpenStreetMap" aria-label="OpenStreetMap" role="listitem">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://apps.mapbox.com/feedback/?owner=mapbox&amp;id=satellite-v9&amp;access_token=pk.eyJ1Ijoib3Blbndvb2RzIiwiYSI6ImNsZjNjaXg2MzBtNDgzb28xN2N6ZDNiM3IifQ.IyWyuTKi7EivffZkjFRpXQ#/-86.85288/33.329108/16" target="_blank" aria-label="Map feedback" role="listitem" rel="noopener nofollow">Improve this map</a> <a href="https://www.maxar.com/" target="_blank" title="Maxar" aria-label="Maxar" role="listitem">© Maxar</a></div></div> */ */
-
-/* make homepage light grey */
-
 img {
   width: 160px;
   height: 160px;
@@ -348,24 +332,12 @@ img {
   font-family: 'Lato', sans-serif; /* modern sans-serif font.........Helvetica Neue */
 }
 
-/* Activity and State NOT BEING USED ANYMORE IN NEW APP*/
-/* .dropdown-container {
-  display: flex;
-  justify-content: left; /* Change to left alignment */
-  /* align-items: center;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  position: relative;
-  left: 10px; */ */
-  /* width: 45; */
-/* } */
 
 /* Activity and State */
 .dropdown-button {
   color:#fe7159ff;
   max-height: 200px !important;
   overflow-y: scroll !important;
-  
 }
 
 .dropdown-menu.show {
