@@ -83,7 +83,7 @@ const HomePage = () => {
                     title={
                       activityOption ? activityOption.label : "Make a selection"
                     }
-                    // menuVariant="dark"
+                    menuVariant="dark"
                     size="lg"
                     style={{ color: "#778184ff" }}>
                     {activityOptions.map((option) => (
@@ -108,6 +108,7 @@ const HomePage = () => {
                     title={
                       americanState ? americanState.label : "Make a selection"
                     }
+                    menuVariant="dark"
                     size="lg">
                     {stateOptions.map((option) => (
                       <Dropdown.Item
