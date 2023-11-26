@@ -7,17 +7,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import activity_icons_in_a_row from "../images/activity_icons_in_a_row_no_text.png";
 import arrowhead_img from "../images/arrowhead_v3.png";
-// public/images/activity_icons_in_a_row.jpg
 import "../pages/HomePage/homepage.css";
 import { activityOptions } from "./ActivityOptions";
 import "../components/Address_Field/AddressField.css";
-import SatelliteMap from "../components/Satelite_Map/Satelite_Map";
 import CalcPrice from "../components/F_CalcPrice/CalculatePriceFunction";
-// import { onChange } from 'react-native'
-// import AddressContext from 'src/components/Address_Field/AddressContext'
-// import AddressField from 'src/components/Address_Field/AddressField'
-// import AddressField from '../Address_Field/AddressField'
-// import AddressField from '../components/Address_Field/AddressField';
 
 const HomePage = () => {
   const [activityOption, setActivityOption] = useState(null);
@@ -27,26 +20,8 @@ const HomePage = () => {
   const [finalPrice, setFinalPrice] = useState(null);
   const [mapData, setMapData] = useState(null);
 
-  // const [activityOption, setActivityOption] = useState({
-  //   value: activityOptions[0],
-  // })
-  // const [americanState, setAmericanState] = useState({ value: stateOptions[0] })
-  // const [acreage, setAcreage] = useState(null)
-  // const [duration, setDuration] = useState(null)
-  // const [finalPrice, setFinalPrice] = useState(null)
-
   const handleClick = () => {
     CalcThenDisplayPrice();
-    // setAddress(address);
-  };
-
-  const [address, setAddress] = React.useState("");
-  function handleAddressChange(value) {
-    setAddress(value);
-  }
-
-  const fetchMapData = async (address) => {
-    return mapData;
   };
 
   const CalcThenDisplayPrice = async () => {
@@ -54,7 +29,6 @@ const HomePage = () => {
     console.log("americanState: ", americanState);
     console.log("acreage: ", acreage);
     console.log("duration: ", duration);
-    console.log("Address: ", address);
     console.log("button submitted");
 
     // const calculatedPrice = CalcPrice('Iowa', 25, 1).toFixed(2)
@@ -65,11 +39,6 @@ const HomePage = () => {
     ).toFixed(2);
     console.log("calculatedPrice: ", calculatedPrice);
     setFinalPrice(calculatedPrice);
-
-    if (address) {
-      const mapData = await fetchMapData(address);
-      setMapData(mapData);
-    }
   };
 
   const handleReset = () => {
@@ -94,7 +63,6 @@ const HomePage = () => {
             <img
               src={activity_icons_in_a_row}
               alt="activity icons"
-              // style={{ height: "50px", width: "700px" }}
               style={{ width: "500px", height: "auto" }} // Adjust as needed
             />
           </div>
@@ -141,8 +109,6 @@ const HomePage = () => {
                       americanState ? americanState.label : "Make a selection"
                     }
                     size="lg">
-                    {/* <Dropdown.Menu> */}
-                    {/* // style={{ Height: "200px", overflowY: "scroll" }} */}
                     {stateOptions.map((option) => (
                       <Dropdown.Item
                         key={option.value}
@@ -150,7 +116,6 @@ const HomePage = () => {
                         {option.label}
                       </Dropdown.Item>
                     ))}
-                    {/* </Dropdown.Menu> */}
                   </DropdownButton>
                 </div>
                 <div>
@@ -239,23 +204,9 @@ const HomePage = () => {
                   Calculate Lease Price
                 </Button>
               </div>
-
-              {/* type='submit' */}
-              {/* className='submit-button'  */}
-              {/* size = 'lg' */}
-              {/* color='submit'           
-                Submit> */}
             </Form>
           </div>
         </div>
-        {/* <div className="home-map-container">
-         <div className=".mapbox-canvas map">
-            <SatelliteMap 
-            id="map"
-            center={[-95.7129, 37.0902]}
-            address={address} />
-           </div>
-      </div> */}
       </div>
       <div className="output-container">
         <div className="output-box">
