@@ -5,17 +5,10 @@ import CountUp from "react-countup";
 import { stateOptions } from "./AmericanStates";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-// public/images/activity_icons_in_a_row.jpg
 import "../pages/HomePage/homepage.css";
 import { activityOptions } from "./ActivityOptions";
-import "../components/Address_Field/AddressField.css";
-import SatelliteMap from "../components/Satelite_Map/Satelite_Map";
-import CalcPrice from "../components/F_CalcPrice/CalculatePriceFunction";
-// import { onChange } from 'react-native'
-// import AddressContext from 'src/components/Address_Field/AddressContext'
-// import AddressField from 'src/components/Address_Field/AddressField'
-// import AddressField from '../Address_Field/AddressField'
-// import AddressField from '../components/Address_Field/AddressField';
+import CalcPrice from "src/images/components/F_CalcPrice/CalculatePriceFunction";
+import activityIcons from "../images/activity_icons_in_a_row_no_text.png";
 
 const HomePage = () => {
   const [activityOption, setActivityOption] = useState(null);
@@ -23,28 +16,9 @@ const HomePage = () => {
   const [acreage, setAcreage] = useState(null);
   const [duration, setDuration] = useState(null);
   const [finalPrice, setFinalPrice] = useState(null);
-  const [mapData, setMapData] = useState(null);
-
-  // const [activityOption, setActivityOption] = useState({
-  //   value: activityOptions[0],
-  // })
-  // const [americanState, setAmericanState] = useState({ value: stateOptions[0] })
-  // const [acreage, setAcreage] = useState(null)
-  // const [duration, setDuration] = useState(null)
-  // const [finalPrice, setFinalPrice] = useState(null)
 
   const handleClick = () => {
     CalcThenDisplayPrice();
-    // setAddress(address);
-  };
-
-  const [address, setAddress] = React.useState("");
-  function handleAddressChange(value) {
-    setAddress(value);
-  }
-
-  const fetchMapData = async (address) => {
-    return mapData;
   };
 
   const CalcThenDisplayPrice = async () => {
@@ -52,7 +26,6 @@ const HomePage = () => {
     console.log("americanState: ", americanState);
     console.log("acreage: ", acreage);
     console.log("duration: ", duration);
-    console.log("Address: ", address);
     console.log("button submitted");
 
     // const calculatedPrice = CalcPrice('Iowa', 25, 1).toFixed(2)
@@ -63,11 +36,6 @@ const HomePage = () => {
     ).toFixed(2);
     console.log("calculatedPrice: ", calculatedPrice);
     setFinalPrice(calculatedPrice);
-
-    if (address) {
-      const mapData = await fetchMapData(address);
-      setMapData(mapData);
-    }
   };
 
   const handleReset = () => {
@@ -90,13 +58,9 @@ const HomePage = () => {
           </div>
           <div className="activity_icons">
             <img
-              src={
-                process.env.PUBLIC_URL +
-                "/images/activity_icons_in_a_row_no_text.png"
-              }
+              src={activityIcons}
               alt="activity icons"
-              // style={{ height: "50px", width: "700px" }}
-              style={{ width: "500px", height: "auto" }} // Adjust as needed
+              style={{ width: "500px", height: "auto" }}
             />
           </div>
 
@@ -240,23 +204,9 @@ const HomePage = () => {
                   Calculate Lease Price
                 </Button>
               </div>
-
-              {/* type='submit' */}
-              {/* className='submit-button'  */}
-              {/* size = 'lg' */}
-              {/* color='submit'           
-                Submit> */}
             </Form>
           </div>
         </div>
-        {/* <div className="home-map-container">
-         <div className=".mapbox-canvas map">
-            <SatelliteMap 
-            id="map"
-            center={[-95.7129, 37.0902]}
-            address={address} />
-           </div>
-      </div> */}
       </div>
       <div className="output-container">
         <div className="output-box">

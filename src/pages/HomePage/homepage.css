@@ -32,7 +32,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 1em;
-  justify-content: end !important;
+  justify-content: flex-end !important;
   height: 100%;
   width: 100vw;
 }
@@ -167,7 +167,7 @@ width: 10%!important;
 
 .form-inputs {
   flex-direction: column;
-  align-items: start; /* Change to left alignment */
+  align-items: flex-start; /* Change to left alignment */
   font-family: 'Open Sans' !important;   
  
   border-style: dashed;
@@ -296,7 +296,7 @@ border-color: #5cc87dff;
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  align-items: start;
+  align-items: flex-start;
 }
 
 
