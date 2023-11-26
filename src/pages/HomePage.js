@@ -160,7 +160,7 @@ const HomePage = () => {
                       justifyContent: "space-between",
                       alignItems: "center",
                     }}
-                    controlId="exampleForm.ControlInput2">
+                    controlId="exampleForm.ControlInput1">
                     <label className="mt-3 mb-3" input-focus>
                       Days in Lease
                     </label>

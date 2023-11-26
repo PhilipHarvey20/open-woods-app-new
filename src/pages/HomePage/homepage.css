@@ -363,8 +363,6 @@ img {
 /* Activity and State */
 .dropdown-button {
   color:#fe7159ff;
-  max-height: 200px !important;
-  overflow-y: scroll !important;
   
 }
 
