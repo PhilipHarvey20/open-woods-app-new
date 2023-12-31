@@ -15,30 +15,48 @@ import CalcPrice from "../components/F_CalcPrice/CalculatePriceFunction";
 const HomePage = () => {
   const [activityOption, setActivityOption] = useState(null);
   const [americanState, setAmericanState] = useState(null);
-  const [acreage, setAcreage] = useState(null);
-  const [duration, setDuration] = useState(null);
+  const [acreage, setAcreage] = useState("");
+  const [duration, setDuration] = useState("");
   const [finalPrice, setFinalPrice] = useState(null);
   const [mapData, setMapData] = useState(null);
 
-  const handleClick = () => {
-    CalcThenDisplayPrice();
-  };
+  const handleClick = async (event) => {
+    event.preventDefault();
 
-  const CalcThenDisplayPrice = async () => {
-    console.log("activityOption: ", activityOption);
-    console.log("americanState: ", americanState);
-    console.log("acreage: ", acreage);
-    console.log("duration: ", duration);
-    console.log("button submitted");
+    // Prepare the data to send
+    const data = {
+      acreage: acreage,
+      state: americanState.value,
+      lease_duration: duration,
+    };
 
-    // const calculatedPrice = CalcPrice('Iowa', 25, 1).toFixed(2)
-    const calculatedPrice = CalcPrice(
-      americanState.value,
-      acreage,
-      duration
-    ).toFixed(2);
-    console.log("calculatedPrice: ", calculatedPrice);
-    setFinalPrice(calculatedPrice);
+    console.log("Sending data:", data);
+
+    try {
+      // Send a POST request to your AWS Lambda function
+      const response = await fetch(
+        "https://qxm9z1c0p5.execute-api.us-east-1.amazonaws.com/default/lease-price-calculator",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      console.log("Response:", response);
+
+      // Parse the response
+      const result = await response.json();
+
+      console.log("Result:", result);
+
+      // Use the returned final price
+      setFinalPrice(result.final_price);
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   const handleReset = () => {
@@ -76,7 +94,7 @@ const HomePage = () => {
                     justifyContent: "space-between",
                     alignItems: "center",
                   }}>
-                  <label className="mt-3 mb-3">Activity</label>
+                  <label className="mt-3 mb-3">Lease Activity</label>
                   <DropdownButton
                     className="dropdown-button"
                     id="activity-dropdown"
@@ -127,11 +145,9 @@ const HomePage = () => {
                       alignItems: "center",
                     }}
                     controlId="exampleForm.ControlInput1">
-                    <label className="mt-3 mb-3" input-focus>
-                      Days in Lease
-                    </label>
+                    <label className="mt-3 mb-3">Days in Lease</label>
                     <Form.Control
-                      className="mt-3 mb-3 input-focus"
+                      className="mt-3 mb-3"
                       style={{
                         flex: "0 0 40%",
                         backgroundColor: "transparent",
@@ -142,8 +158,6 @@ const HomePage = () => {
                       }}
                       type="number"
                       size="lg"
-                      backgroundColor="transparent"
-                      // width=
                       placeholder="Enter Here"
                       value={duration}
                       onChange={(e) => setDuration(e.target.value)}
@@ -194,7 +208,7 @@ const HomePage = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  onClick={handleClick}
+                  onClick={(event) => handleClick(event)}
                   className="submit-button"
                   style={{
                     backgroundColor: "rgb(99, 128, 99)",
