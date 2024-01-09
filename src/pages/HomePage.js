@@ -9,19 +9,26 @@ import activity_icons_in_a_row from "../images/activity_icons_in_a_row_no_text.p
 import arrowhead_img from "../images/arrowhead_v3.png";
 import "../pages/HomePage/homepage.css";
 import { activityOptions } from "./ActivityOptions";
-import "../components/Address_Field/AddressField.css";
-import CalcPrice from "../components/F_CalcPrice/CalculatePriceFunction";
+// import "../components/Address_Field/AddressField.css";
 
 const HomePage = () => {
   const [activityOption, setActivityOption] = useState(null);
   const [americanState, setAmericanState] = useState(null);
   const [acreage, setAcreage] = useState("");
   const [duration, setDuration] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [finalPrice, setFinalPrice] = useState(null);
-  const [mapData, setMapData] = useState(null);
+  // const [mapData, setMapData] = useState(null);
 
   const handleClick = async (event) => {
     event.preventDefault();
+
+    // Check if all form fields are filled
+    if (!acreage || !americanState || !duration) {
+      return; // Return early if any field is not filled
+    }
+
+    setIsLoading(true); // Start loading
 
     // Prepare the data to send
     const data = {
@@ -54,8 +61,10 @@ const HomePage = () => {
 
       // Use the returned final price
       setFinalPrice(result.final_price);
+      setIsLoading(false); // Stop loading
     } catch (error) {
       console.error("Error:", error);
+      setIsLoading(false); // Stop loading in case of error
     }
   };
 
@@ -224,28 +233,53 @@ const HomePage = () => {
         </div>
       </div>
       <div className="output-container">
-        <div className="output-box">
-          <div style={{ position: "relative" }}>
-            <img
-              className="arrowhead-img"
-              src={arrowhead_img}
-              alt="arrowhead img"
-              style={{ width: "43%", height: "auto" }} // Adjust as needed
-            />
-            <div
-              className="final_price"
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                color: "white", // Change the color so the text is visible on the image
-              }}>
-              {"$ "}
-              <CountUp start={0} end={finalPrice} duration={0.33} />
+        {isLoading ? (
+          <div className="output-box">
+            <div style={{ position: "relative" }}>
+              <img
+                className="arrowhead-img"
+                src={arrowhead_img}
+                alt="arrowhead img"
+                style={{ width: "43%", height: "auto" }} // Adjust as needed
+              />
+              <div
+                className="final_price"
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  color: "white", // Change the color so the text is visible on the image
+                  fontSize: "90%", // Reduce the font size to half
+                }}>
+                Calculating...
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <div className="output-box">
+            <div style={{ position: "relative" }}>
+              <img
+                className="arrowhead-img"
+                src={arrowhead_img}
+                alt="arrowhead img"
+                style={{ width: "43%", height: "auto" }} // Adjust as needed
+              />
+              <div
+                className="final_price"
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  color: "white", // Change the color so the text is visible on the image
+                }}>
+                {"$ "}
+                <CountUp start={0} end={finalPrice} duration={0.33} />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
