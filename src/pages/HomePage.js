@@ -6,6 +6,15 @@ import { stateOptions } from "./AmericanStates";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import activity_icons_in_a_row from "../images/activity_icons_in_a_row_no_text.png";
+import activity_icons_hunting from "../images/activity_icons_hunting.png";
+import activity_icons_fishing from "../images/activity_icons_fishing.png";
+import activity_icons_camping from "../images/activity_icons_camping.png";
+import activity_icons_metal_detecting from "../images/activity_icons_metal_detecting.png";
+import activity_icons_farming from "../images/activity_icons_farming.png";
+import activity_icons_shed_antler_hunting from "../images/activity_icons_shed_antler_hunting.png";
+import activity_icons_artifact_hunting from "../images/activity_icons_artifact_hunting.png";
+import activity_icons_hiking from "../images/activity_icons_hiking.png";
+
 import arrowhead_img from "../images/arrowhead_v3.png";
 import "../pages/HomePage/homepage.css";
 import { activityOptions } from "./ActivityOptions";
@@ -19,6 +28,16 @@ const HomePage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [finalPrice, setFinalPrice] = useState(null);
   // const [mapData, setMapData] = useState(null);
+  const activityImages = {
+    Hunting: activity_icons_hunting,
+    Fishing: activity_icons_fishing,
+    Camping: activity_icons_camping,
+    Metal_Detecting: activity_icons_metal_detecting,
+    Farming: activity_icons_farming,
+    Shed_Antler_Collecting: activity_icons_shed_antler_hunting,
+    Artifact_Hunting: activity_icons_artifact_hunting,
+    Hiking: activity_icons_hiking,
+  };
 
   const handleClick = async (event) => {
     event.preventDefault();
@@ -88,7 +107,11 @@ const HomePage = () => {
           </div>
           <div className="activity_icons">
             <img
-              src={activity_icons_in_a_row}
+              src={
+                activityOption
+                  ? activityImages[activityOption.value]
+                  : activity_icons_in_a_row
+              }
               alt="activity icons"
               style={{ width: "500px", height: "auto" }} // Adjust as needed
             />
