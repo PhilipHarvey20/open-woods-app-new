@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import arrowhead_img from "../images/arrowhead_v3.png";
-import './antler-scoring-page.css';
+import "./antler-scoring-page.css";
 
 const AntlerScoringTool = () => {
   const [uploadedImage, setUploadedImage] = useState(null);
@@ -21,7 +21,7 @@ const AntlerScoringTool = () => {
 
   return (
     <div className="home-container">
-      <div className="home-input-container">
+      <div className="as-input-container" style={{ height: "80%" }}>
         <div className="home-form-container">
           <div className="form-title">Whitetail Antler Scoring</div>
           <div className="form-subtitle">
@@ -51,23 +51,15 @@ const AntlerScoringTool = () => {
               </Button>
             </label>
           </div>
-
-          <div className="activity_icons">
-            {uploadedImage ? (
-              <img
-                src={uploadedImage}
-                alt="Uploaded"
-                style={{ width: "500px", height: "auto" }}
-              />
-            ) : (
-              <img
-                src={arrowhead_img}
-                alt="Default"
-                style={{ width: "500px", height: "auto" }}
-              />
-            )}
-          </div>
         </div>
+      </div>
+      <div className="as-output-container" style={{ height: "20%" }}>
+        <img
+          className="arrowhead-img"
+          src={arrowhead_img}
+          alt="arrowhead img"
+          style={{ width: "16%", height: "auto" }} // Adjust as needed
+        />
       </div>
     </div>
   );
