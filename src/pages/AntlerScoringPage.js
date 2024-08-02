@@ -21,9 +21,7 @@ const AntlerScoringTool = () => {
   };
 
   return (
-    <div
-      className="as-page-container"
-      style={{ display: "flex", height: "100vh" }}>
+    <div className="as-page-container" style={{ display: "flex" }}>
       <div
         className="as-input-container"
         style={{
@@ -35,7 +33,7 @@ const AntlerScoringTool = () => {
         <div
           className="form-title"
           style={{
-            display: "flex",
+            height: "20%",
             flexDirection: "column",
             margin: 0, // outside element
             padding: "2rem", // inside element
@@ -47,6 +45,7 @@ const AntlerScoringTool = () => {
           style={{
             display: "flex",
             flexDirection: "column",
+            height: "10%",
             margin: 0, // outside element
             padding: ".5rem", // inside element
           }}>
@@ -55,23 +54,25 @@ const AntlerScoringTool = () => {
         <div
           className="as-deer-image"
           style={{
-            display: "flex",
-            flexDirection: "column",
+            JustifyContent: "center",
+            alignItems: "center",
+            // flexDirection: "column",
             margin: 0, // Remove margin
             padding: 0, // Remove padding
-            height: "80%", // Adjust height
-            width: "auto", // Adjust width
+            height: "70%", // Add maxWidth to prevent overflow
+            width: "auto", // Add maxHeight to prevent overflow
           }}>
           {uploadedImage ? (
             <img
               src={uploadedImage}
               alt="Uploaded"
               style={{
-                display: "flex",
+                JustifyContent: "center",
+                alignItems: "center",
                 flexDirection: "column",
-                maxWidth: "100%",
-                maxHeight: "100%",
-                objectFit: "contain", // Ensure the image fits within the container
+                height: "100%", // Add maxWidth to prevent overflow
+                width: "auto", // Add maxHeight to prevent overflow
+                padding: ".5rem", // Remove padding
               }}
             />
           ) : (
@@ -79,53 +80,55 @@ const AntlerScoringTool = () => {
               src={upload_deer_img_placeholder}
               alt="Default"
               style={{
-                display: "flex",
+                JustifyContent: "center",
+                alignItems: "center",
                 flexDirection: "column",
-                maxWidth: "100%",
-                maxHeight: "100%",
-                objectFit: "contain", // Ensure the image fits within the container
+                height: "100%", // Add maxWidth to prevent overflow
+                width: "auto", // Add maxHeight to prevent overflow
+                padding: ".5rem", // Remove padding
               }}
             />
           )}
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            flex: 3,
-            justifyContent: "center",
-            alignItems: "center",
-            padding: "10px",
-          }}>
-          <input
-            type="file"
-            accept="image/*"
-            style={{ display: "none" }}
-            id="upload-button"
-            onChange={handleImageUpload}
-          />
-          <label htmlFor="upload-button">
-            <Button
-              variant="secondary"
-              size="lg"
-              className="upload-button"
-              style={{
-                margin: "0 auto", // 0 centers button horizontally, auto adjusts margins automatically
-                backgroundColor: "rgb(99, 128, 99)",
-                borderColor: "rgb(99, 128, 99)",
-                color: "white",
-              }}
-              onClick={() => document.getElementById("upload-button").click()}>
-              Upload Photo
-            </Button>
-          </label>
-        </div>
       </div>
+      <div
+        style={{
+          flexDirection: "column",
+          height: "15%",
+          width: "auto",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: ".5rem",
+        }}>
+        <input
+          type="file"
+          accept="image/*"
+          style={{ display: "none" }}
+          id="upload-button"
+          onChange={handleImageUpload}
+        />
+        <label htmlFor="upload-button">
+          <Button
+            variant="secondary"
+            size="lg"
+            className="upload-button"
+            style={{
+              margin: "0 auto", // 0 centers button horizontally, auto adjusts margins automatically
+              backgroundColor: "rgb(99, 128, 99)",
+              borderColor: "rgb(99, 128, 99)",
+              color: "white",
+            }}
+            onClick={() => document.getElementById("upload-button").click()}>
+            Upload Photo
+          </Button>
+        </label>
+      </div>
+
       <div
         className="as-output-container"
         style={{
-          display: "flex",
-          height: "25%",
+          // display: "flex",
+          height: "10%",
           width: "auto",
           flexDirection: "column",
         }}>
@@ -133,7 +136,7 @@ const AntlerScoringTool = () => {
           className="arrowhead-img"
           src={arrowhead_img}
           alt="arrowhead img"
-          style={{ width: "auto", height: "20%" }}
+          style={{ width: "auto", height: "100%" }}
         />
       </div>
     </div>
