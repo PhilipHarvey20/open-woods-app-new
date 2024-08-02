@@ -21,84 +21,119 @@ const AntlerScoringTool = () => {
   };
 
   return (
-    <div className="as-page-container">
-      <div className="as-input-container" style={{ height: "80%" }}>
-        <div className="as-deer-image-container">
-          <div className="form-title">Whitetail Antler Scoring</div>
-          <div className="form-subtitle">
-            Our model estimates a gross B&C/P&Y score
-          </div>
-          <div
-            className="as-deer-image-and-buttons"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              height: "100%",
-            }}>
-            <div
+    <div
+      className="as-page-container"
+      style={{ display: "flex", height: "100vh" }}>
+      <div
+        className="as-input-container"
+        style={{
+          display: "flex",
+          height: "75%",
+          width: "auto",
+          flexDirection: "column",
+        }}>
+        <div
+          className="form-title"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            margin: 0, // outside element
+            padding: "2rem", // inside element
+          }}>
+          Whitetail Antler Scoring
+        </div>
+        <div
+          className="form-subtitle"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            margin: 0, // outside element
+            padding: ".5rem", // inside element
+          }}>
+          Our model estimates a gross B&C/P&Y score
+        </div>
+        <div
+          className="as-deer-image"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            margin: 0, // Remove margin
+            padding: 0, // Remove padding
+            height: "80%", // Adjust height
+            width: "auto", // Adjust width
+          }}>
+          {uploadedImage ? (
+            <img
+              src={uploadedImage}
+              alt="Uploaded"
               style={{
-                flex: 1,
                 display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}>
-              {uploadedImage ? (
-                <img
-                  src={uploadedImage}
-                  alt="Uploaded"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "contain",
-                  }}
-                />
-              ) : (
-                <img
-                  src={upload_deer_img_placeholder}
-                  alt="Default"
-                  style={{ width: "50%", height: "auto" }}
-                />
-              )}
-            </div>
-            <div
+                flexDirection: "column",
+                maxWidth: "100%",
+                maxHeight: "100%",
+                objectFit: "contain", // Ensure the image fits within the container
+              }}
+            />
+          ) : (
+            <img
+              src={upload_deer_img_placeholder}
+              alt="Default"
               style={{
-                flex: 1,
                 display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}>
-              <input
-                type="file"
-                accept="image/*"
-                style={{ display: "none" }}
-                id="upload-button"
-                onChange={handleImageUpload}
-              />
-              <label htmlFor="upload-button">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="upload-button"
-                  style={{
-                    display: "block",
-                    margin: "0 auto",
-                    backgroundColor: "rgb(99, 128, 99)",
-                    borderColor: "rgb(99, 128, 99)",
-                    color: "white",
-                  }}>
-                  Upload Photo
-                </Button>
-              </label>
-            </div>
-          </div>
+                flexDirection: "column",
+                maxWidth: "100%",
+                maxHeight: "100%",
+                objectFit: "contain", // Ensure the image fits within the container
+              }}
+            />
+          )}
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            flex: 3,
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "10px",
+          }}>
+          <input
+            type="file"
+            accept="image/*"
+            style={{ display: "none" }}
+            id="upload-button"
+            onChange={handleImageUpload}
+          />
+          <label htmlFor="upload-button">
+            <Button
+              variant="secondary"
+              size="lg"
+              className="upload-button"
+              style={{
+                margin: "0 auto", // 0 centers button horizontally, auto adjusts margins automatically
+                backgroundColor: "rgb(99, 128, 99)",
+                borderColor: "rgb(99, 128, 99)",
+                color: "white",
+              }}
+              onClick={() => document.getElementById("upload-button").click()}>
+              Upload Photo
+            </Button>
+          </label>
         </div>
       </div>
-      <div className="as-output-container" style={{ height: "20%" }}>
+      <div
+        className="as-output-container"
+        style={{
+          display: "flex",
+          height: "25%",
+          width: "auto",
+          flexDirection: "column",
+        }}>
         <img
           className="arrowhead-img"
           src={arrowhead_img}
           alt="arrowhead img"
-          style={{ width: "16%", height: "auto" }} // Adjust as needed
+          style={{ width: "auto", height: "20%" }}
         />
       </div>
     </div>
