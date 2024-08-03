@@ -36,7 +36,7 @@ const AntlerScoringTool = () => {
             height: "20%",
             flexDirection: "column",
             margin: 0, // outside element
-            padding: "2rem", // inside element
+            // padding: "1rem", // inside element
           }}>
           Whitetail Antler Scoring
         </div>
@@ -56,7 +56,6 @@ const AntlerScoringTool = () => {
           style={{
             JustifyContent: "center",
             alignItems: "center",
-            // flexDirection: "column",
             margin: 0, // Remove margin
             padding: 0, // Remove padding
             height: "70%", // Add maxWidth to prevent overflow
@@ -94,7 +93,7 @@ const AntlerScoringTool = () => {
       <div
         style={{
           flexDirection: "column",
-          height: "15%",
+          height: "10%",
           width: "auto",
           justifyContent: "center",
           alignItems: "center",
@@ -128,9 +127,10 @@ const AntlerScoringTool = () => {
         className="as-output-container"
         style={{
           // display: "flex",
-          height: "10%",
+          height: "15%",
           width: "auto",
           flexDirection: "column",
+          padding: ".7rem",
         }}>
         <img
           className="arrowhead-img"
