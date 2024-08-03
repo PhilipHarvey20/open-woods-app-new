@@ -92,7 +92,8 @@ const AntlerScoringTool = () => {
       </div>
       <div
         style={{
-          flexDirection: "column",
+          display: "flex",
+          flexDirection: "row",
           height: "10%",
           width: "auto",
           justifyContent: "center",
@@ -112,15 +113,29 @@ const AntlerScoringTool = () => {
             size="lg"
             className="upload-button"
             style={{
-              margin: "0 auto", // 0 centers button horizontally, auto adjusts margins automatically
               backgroundColor: "rgb(99, 128, 99)",
               borderColor: "rgb(99, 128, 99)",
               color: "white",
+              marginRight: "1rem",
             }}
             onClick={() => document.getElementById("upload-button").click()}>
             Upload Photo
           </Button>
         </label>
+        {uploadedImage && (
+          <Button
+            variant="primary"
+            size="lg"
+            className="score-button"
+            style={{
+              backgroundColor: "rgb(99, 128, 99)",
+              borderColor: "rgb(99, 128, 99)",
+              color: "white",
+            }}
+            onClick={() => alert("Scoring Buck...")}>
+            Score Buck
+          </Button>
+        )}
       </div>
 
       <div
