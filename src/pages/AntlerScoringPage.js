@@ -72,6 +72,7 @@ const AntlerScoringTool = () => {
                 height: "100%", // Add maxWidth to prevent overflow
                 width: "auto", // Add maxHeight to prevent overflow
                 padding: ".5rem", // Remove padding
+                borderRadius: "30px", // Add border radius
               }}
             />
           ) : (
@@ -85,6 +86,7 @@ const AntlerScoringTool = () => {
                 height: "100%", // Add maxWidth to prevent overflow
                 width: "auto", // Add maxHeight to prevent overflow
                 padding: ".5rem", // Remove padding
+                borderRadius: "30px", // Add border radius
               }}
             />
           )}
